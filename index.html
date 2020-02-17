@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html style="overflow: hidden">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Nihal Dantluri</title>
+        <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
+
+        <link rel="icon" type="image/svg" href="res/videocam-24px.svg">
+
+        <link rel="stylesheet" href="styles/styles.css">
+
+        <!--fullpage-->
+        <link rel="stylesheet" href="fullpage/fullpage.css">
+
+        <!--firebase auth ui-->
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+        
+        <!--fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri|Nunito|Roboto+Condensed|Yantramanav&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div class = "container" id="app">
+
+            <div v-bind:class="[displayLoader ? 'loader-active' : 'loader-inactive']">
+                <div class="loader">Loading...</div>
+            </div>
+
+            <div class="navbar" v-bind:class="[ watch ? 'invisible' : 'visible' ]">
+
+                    
+                <div class="nav-inner">
+                    <ul class="nav-left">
+                        <li @click="{ $refs.fullpage.api.moveTo(1) }" v-bind:class="[!currentTab ? 'active' : '']">Work</li>
+                        <a href="photos.html"><li @click="">Photo</li></a>
+                        <li @click="{ $refs.fullpage.api.moveTo(items.length + 2) }" v-bind:class="[currentTab ? 'active' : '']" class="contact-link">Contact</li>
+                    </ul>
+
+                    <ul class="nav-right">
+                        <!--li><a href="https://www.imdb.com/name/nm7577022/?ref_=nv_sr_srsg_0" target="_blank"><div class="social-link imdb"></div></a></li>
+                        <li><a href="https://vimeo.com/nihaldantluri" target="_blank"><div class="social-link vimeo"></div></a></li>
+                        <li><a href="https://www.instagram.com/nihal_dantluri/" target="_blank"><div class="social-link instagram"></div></a></li-->
+                    </ul>
+                </div>
+            </div>
+            
+
+            <div>
+                <full-page ref="fullpage" :options="options" id="fullpage" :skip-init="true">
+                    <h1>Home</h1>
+                </full-page>
+            </div>
+        
+        </div>
+
+        <!-- Vue -->   
+        <script src="https://unpkg.com/vue"></script>
+        <!-- firebase -->
+        <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
+        <!-- firestore -->
+        <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-firestore.js"></script>
+        <!-- vue-firestore -->   
+        <script src="https://unpkg.com/vue-firestore"></script>
+        <!-- storage -->
+        <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-storage.js"></script>
+        <!-- emailjs -->
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
+        </script>
+        <script type="text/javascript">(function(){emailjs.init("user_kTZviK8cM7UnEbWOUl1bX");})();</script>
+        <!-- fullpage-->
+        <script src="fullpage/fullpage.js"></script>
+        <!-- app -->
+        <script src="app.js"></script>
+    </body>
+</html>
