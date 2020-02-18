@@ -87,7 +87,7 @@ new Vue({
             parentObj.setItems();
             parentObj.componentsReady();
             parentObj.removeLoader();
-        }, 2000);
+        }, 1000);
     },
     methods: {
         componentsReady() {
