@@ -26,6 +26,7 @@ body h1 {
   z-index: 999;
   height: 72px;
   position: fixed;
+  padding-top: 18px;
 }
 
 .navbar .nav-inner {
@@ -74,7 +75,7 @@ body h1 {
 }
 
 .navbar .logo {
-  background-image: url("../res/logo-main.png");
+  background-image: url("../res/logo-white.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -161,5 +162,29 @@ button:hover {
 
 .hero-header {
   font-size: 64px;
+}
+
+.section-prototypes {
+  background: #0d47a1;
+}
+
+.section-development {
+  background: #1565c0;
+}
+
+.section-animation {
+  background: #1976d2;
+}
+
+.section-logo {
+  background: #1e88e5;
+}
+
+.section-photo {
+  background: #2196f3;
+}
+
+.section-art {
+  background: #42a5f5;
 }
 /*# sourceMappingURL=styles.css.map */
