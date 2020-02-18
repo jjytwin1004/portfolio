@@ -16,8 +16,6 @@ body {
     background: black;
     color: white;
 
-
-
     p {
         font-size: 24px;
     }
@@ -28,6 +26,80 @@ body {
 
     h1 {
         transition: 300ms;
+    }
+}
+
+//----------navbar----------
+
+.navbar {
+    //background: red;
+    display: inline-flex;
+    width: 100%;
+    z-index:999;
+    height: 72px;
+    position:fixed;
+
+    .nav-inner {
+        //background:blue;
+        display: inline-flex;
+
+        .nav-options {
+            display: inline-flex;
+            position: absolute;
+            
+            li {
+                margin-right: 24px;
+                line-height: 40px;
+                cursor: pointer;
+                //background:red;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        .nav-left {
+            left: 0;
+            padding-left: 36px;
+        }
+
+        .nav-right {
+            right: 0;
+            padding-right: 24px;
+        }
+    }
+
+    .divide {
+        color:white;
+        font-weight: bold;
+        opacity: 1;
+        cursor: default !important;
+        font-size: 18px;
+
+        &:hover {
+            opacity: 1 !important;
+        }
+    }
+
+    .logo {
+        //background: red;
+        background-image: url('../res/logo-main.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        margin-right: 48px;
+        cursor: pointer;
+    }
+}
+
+.nav-active {
+    border-bottom: 2px white solid;
+
+    &:hover {
+        opacity: 1 !important;
     }
 }
 
@@ -46,12 +118,18 @@ body {
     justify-content: center !important;
     height: 100vh;
     //filter: contrast(0.7);
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     
     h1 {
         text-align: center;
         margin: 0px;
         font-weight: bold;
-        font-size: 
+        font-size: 48px;
     }
 
     p {
@@ -65,12 +143,13 @@ button {
     padding: 12px 24px 12px 24px;
     border: 2px solid white;
     margin: 18px 12px 18px 12px;
-    font-size: 22px;
+    font-size: 18px;
     cursor: pointer;
     transition: 200ms;
     display: inline-flex;
     background: rgba(0,0,0,0);
     color: white;
+    border-radius: 12px;
 
     &:hover {
         background: white;
@@ -86,248 +165,5 @@ button {
 //---------- mobile ----------
 
 @media only screen and (max-width: 768px) {
-    img {
-        width: 112px !important;
-    }
 
-    .vid-window-active {
-        background: black;
-        
-        video {
-            height: 30% !important;
-            transform: scale(1);
-        }
-    }
-
-    .bio-content {
-        margin-left: 24px !important;
-        padding-top: 48px !important;
-        width: 100% !important;
-    }
-
-    .bio {
-        margin-bottom: 0px !important;
-        width: 83% !important;
-        //font-size: 18px;
-    }
-
-    .contact-form {
-        padding: 12px 24px 12px 24px;
-        width: 72%;
-
-        h4 {
-            font-size: 14px !important;
-            padding: 12px;
-        }
-    }
-
-    .section-left {
-        display: block;
-        margin-left: 0px !important;
-        padding-top: 80px;
-        margin-bottom: 170px !important;
-
-        label {
-            font-size: 12px;
-            margin: 0px !important;
-        }
-
-        input[type="text"], input[type="email"] {
-            height: 12px !important;
-            margin: 6px 0px 6px 0px !important;
-        }
-
-        input[type="submit"] {
-            padding: 3px 6px 3px 6px;
-            font-size: 12px;
-            margin: 0px !important;
-        }
-
-        textarea {
-            height: 42px !important;
-        }
-
-        .portrait-img {
-            width: 120px;
-            height: 120px;
-        }
-
-        h1 {
-            font-size: 28px !important;
-            margin-left: 0px !important;
-            margin-bottom: 12px !important;
-        }
-
-        p {
-            font-size: 14px !important;
-            width: 75% !important;
-        }
-    }
-
-    .layer-left-active {
-        transition: 1.5s;
-        margin-bottom: 342px !important;
-    }
-
-    .more-info {
-        padding: 24px !important; 
-
-        .credits {
-            width: 85% !important;
-            p {
-                font-size: 12px !important;
-            }
-        }
-    }
-
-    .foot {
-        padding: 0px !important;
-        p {
-            font-size: 8px;
-        }
-    }
-
-    .images {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        margin: 12px 0px 0px 0px !important;
-        width: 75%;
-
-        li {
-            width: 0px;
-        }
-
-        img {
-            padding-right: 12px !important;
-        }
-    }
-
-    h1 {
-        font-size: 36px !important;
-        margin-left: 24px !important; 
-        text-align: left !important;
-    }
-
-    .layer {
-        padding: 24px;
-        width: 100%;
-
-        .layer-left {
-            margin-bottom: -32px;
-        }
-
-        h1 {
-            margin: 0px !important;
-            font-size: 28px;
-        }
-
-        .genre {
-            font-size: 14px;
-        }
-    
-        .summary {
-            font-size: 14px;
-            width: 80%;
-        }
-    }
-
-    .layer-main {
-
-        text-align: left;
-        height: 55vh !important;
-        margin-bottom: 0px;
-        animation: none !important;
-
-        p {
-            font-size: 18px !important; 
-            text-align: left !important;
-            margin-left: 24px !important;
-        }
-    }
-
-    button {
-        margin: 0px 12px 0px 0px !important;
-        font-size: 14px;
-        padding: 6px 12px 6px 12px;
-    }
-
-    .info {
-        padding-right: 24px;
-        font-size: 14px;
-    }
-
-    #fp-nav {
-        //background: red !important;
-        transform: scale(0.8) !important;
-        right: 12px !important;
-    }
-
-    .hero-buttons {
-        position: absolute;
-        margin-left: 24px;
-        bottom: 36px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .navbar {
-
-        background: linear-gradient(black, transparent) ;
-
-        .nav-left {
-            position: absolute;
-        }
-
-        .nav-options {
-            //background: red !important;
-            position: absolute;
-        }
-
-        li {
-            font-size: 12px !important;
-            margin-right: 24px !important;
-        }
-
-        .nav-inner {
-            padding: 6px 24px 0px 24px !important;
-        }
-
-        .nav-right {
-            height: 60px !important;
-            padding: 0px !important;
-
-            li {
-                display: flex !important;
-                justify-content: center !important;
-                align-items: center !important;
-                margin: 0px 0px 0px 24px !important;
-            }
-        }
-    }
-
-    video {
-        height: 35% !important;
-        width: 100% !important;
-        object-fit: contain;
-    }
-
-    .grid-container {
-        margin: 0px !important;
-        grid-template-columns: 1fr !important;
-        width: 100% !important;
-        grid-gap: 24px;
-        padding-top: 90px !important;
-        padding-bottom: 48px !important;
-        border-radius: 0px !important;
-        
-        .photo {
-            width: 100% !important;
-            margin-top: 12px !important;
-            margin-left:auto !important;
-            margin-right: auto !important;
-            height: auto !important;
-            pointer-events: none;
-        }
-    }
 }

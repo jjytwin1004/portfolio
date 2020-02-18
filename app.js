@@ -43,21 +43,16 @@ new Vue({
             infoAmount: 'More info',
             enter: false,
             exit: false,
-            displayLoader: true,
-            displayVeil: false,
-            watch: false,
-            vidTime: 85,
-            fadingEffect: true,
             options: {
                 //parent: this,
                 afterLoad: this.handleLoad,
                 onLeave: this.handleLeave,
                 navigation: true,
-                navigationPosition: 'right',
+                navigationPosition: 'left',
                 parallax: true,
                 lazyLoading: false,
                 scrollingSpeed: 750,
-                anchors:[],
+                anchors:["home","prototypes","development","animation","logo","photography","art","contact"],
             },
             item: {
                 title: "",
@@ -87,27 +82,6 @@ new Vue({
     },
     methods: {
         componentsReady() {
-            //console.log(this.items.length);
-
-            for(let i = 0; i < this.items.length + 2; i++) {
-                this.options.anchors.push("");
-            }
-
-            console.log(this.options.anchors.length);
-
-            this.options.anchors[this.options.anchors.length - 1] = "contact"
-
-            /*this.options.anchors.push("home");
-
-            for(let i = 0; i < this.items.length; i++) {
-                console.log(this.items[i].title);
-                this.options.anchors.push(i);
-            }
-
-            this.options.anchors.push("contact");
-
-            console.log(this.options);*/
-
             this.$refs.fullpage.init()
             this.$refs.fullpage.build()
             console.log('fullpage initialized');
@@ -121,6 +95,7 @@ new Vue({
         navigate(section) {
             this.$refs.fullpage.api.moveTo(section);
             this.currentTab = section;
+            console.log(this.currentTab);
         },
         add() {
             //console.log('clicked')
@@ -285,13 +260,6 @@ new Vue({
         handleLoad(destination, direction) {
             //console.log("Emitted 'after load' event");
             this.enter = true;
-            //console.log('enter?: ' + this.enter);
-            this.displayVeil = false;
-
-            //console.log('end animation');
-            //console.log("current section: " + this.items.length);
-
-            this.currentTab = direction.isLast;
         },
         toggleInfo() {
             if(this.infoActive) {
