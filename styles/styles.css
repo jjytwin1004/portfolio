@@ -34,8 +34,10 @@ body h1 {
 
 .enter {
   opacity: 1;
-  -webkit-transition: 600ms;
-  transition: 600ms;
+  -webkit-transition: opacity 600ms, -webkit-transform 600ms;
+  transition: opacity 600ms, -webkit-transform 600ms;
+  transition: opacity 600ms, transform 600ms;
+  transition: opacity 600ms, transform 600ms, -webkit-transform 600ms;
 }
 
 .stage-below {
@@ -45,6 +47,67 @@ body h1 {
   transition: 300ms;
   -webkit-transform: translateY(64px);
           transform: translateY(64px);
+}
+
+.stage-above {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  -webkit-transform: translateY(-64px);
+          transform: translateY(-64px);
+}
+
+.stage-right {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  -webkit-transform: translateX(64px);
+          transform: translateX(64px);
+}
+
+.stage-left {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  -webkit-transform: translateX(-64px);
+          transform: translateX(-64px);
+}
+
+.redboi {
+  background: red;
+}
+
+.delay-1 {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
+}
+
+.delay-2 {
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+
+.delay-3 {
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+.delay-4 {
+  -webkit-transition-delay: 400ms;
+          transition-delay: 400ms;
+}
+
+.delay-5 {
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+
+.delay-6 {
+  -webkit-transition-delay: 600ms;
+          transition-delay: 600ms;
 }
 
 .navbar {
@@ -120,6 +183,10 @@ body h1 {
 
 .nav-active:hover {
   opacity: 1 !important;
+}
+
+.center-text {
+  text-align: center;
 }
 
 .container {
@@ -275,7 +342,6 @@ button:hover {
 }
 
 .project-slide h1 {
-  text-align: center;
   font-weight: normal !important;
 }
 
