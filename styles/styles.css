@@ -1,6 +1,6 @@
 body {
   margin: 0px;
-  font-family: 'Yantramanav', sans-serif;
+  font-family: 'Nunito', sans-serif;
   background: black;
   color: white;
 }
@@ -16,6 +16,18 @@ body .credit {
 body h1 {
   -webkit-transition: 300ms;
   transition: 300ms;
+}
+
+.visible {
+  -webkit-transition: 2s;
+  transition: 2s;
+  opacity: 1;
+}
+
+.invisible {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  opacity: 0;
 }
 
 .navbar {
@@ -81,7 +93,7 @@ body h1 {
   background-repeat: no-repeat;
   width: 40px;
   height: 40px;
-  margin-right: 48px;
+  margin-right: 36px;
   cursor: pointer;
 }
 
@@ -139,6 +151,44 @@ body h1 {
   font-size: 24px;
 }
 
+.title-container {
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  top: 38%;
+  z-index: 999;
+  -webkit-transition: 700ms;
+  transition: 700ms;
+}
+
+.title-container .hero-title {
+  font-weight: normal !important;
+  font-size: 42px;
+}
+
+.title-container-nav {
+  position: fixed;
+  left: 112px;
+  right: 85%;
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  top: 30px;
+  text-align: center;
+  z-index: 999;
+  -webkit-transition: 700ms;
+  transition: 700ms;
+}
+
+.title-container-nav .hero-title {
+  font-size: 18px;
+}
+
 button {
   padding: 12px 24px 12px 24px;
   border: 2px solid white;
@@ -186,5 +236,180 @@ button:hover {
 
 .section-art {
   background: #42a5f5;
+}
+
+.bio-content {
+  display: block;
+  width: 36%;
+}
+
+.contact-icon {
+  height: 40px;
+  width: 40px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  margin-right: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+h4 {
+  margin: 0px;
+  padding: 24px 36px 24px 24px;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  border-radius: 6px;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+h4:hover {
+  background: #212225;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.icon-phone {
+  background-image: url("../res/icons/phone-24px.svg");
+}
+
+.icon-email {
+  background-image: url("../res/icons/email-24px.svg");
+}
+
+.icon-cv {
+  background-image: url("../res/icons/description-24px.svg");
+}
+
+.portrait-img {
+  background: gray;
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 36px;
+}
+
+.bio {
+  font-size: 18px;
+  font-weight: normal;
+  width: 75%;
+}
+
+.contact-footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.section-left {
+  background: #101010;
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+}
+
+.contact-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.foot {
+  position: absolute;
+  background: black;
+  width: 100%;
+  bottom: 0px;
+  text-align: center;
+  padding: 6px;
+}
+
+.foot .love {
+  width: 18px;
+  height: 18px;
+  background-image: url("../res/icons/vimeo.png");
+}
+
+.foot p {
+  opacity: 0.6;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.foot a {
+  color: white;
+}
+
+.foot a:hover {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .bio-content {
+    margin-left: 24px !important;
+    padding-top: 48px !important;
+    width: 100% !important;
+  }
+  .bio {
+    margin-bottom: 0px !important;
+    width: 83% !important;
+  }
+  .contact-form {
+    padding: 12px 24px 12px 24px;
+    width: 72%;
+  }
+  .contact-form h4 {
+    font-size: 14px !important;
+    padding: 12px;
+  }
+  .section-left {
+    display: block;
+    margin-left: 0px !important;
+    padding-top: 80px;
+    margin-bottom: 170px !important;
+  }
+  .section-left label {
+    font-size: 12px;
+    margin: 0px !important;
+  }
+  .section-left input[type="text"], .section-left input[type="email"] {
+    height: 12px !important;
+    margin: 6px 0px 6px 0px !important;
+  }
+  .section-left input[type="submit"] {
+    padding: 3px 6px 3px 6px;
+    font-size: 12px;
+    margin: 0px !important;
+  }
+  .section-left textarea {
+    height: 42px !important;
+  }
+  .section-left .portrait-img {
+    width: 120px;
+    height: 120px;
+  }
+  .section-left h1 {
+    font-size: 28px !important;
+    margin-left: 0px !important;
+    margin-bottom: 12px !important;
+  }
+  .section-left p {
+    font-size: 14px !important;
+    width: 75% !important;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
