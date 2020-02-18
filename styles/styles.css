@@ -32,6 +32,21 @@ body h1 {
   opacity: 0;
 }
 
+.enter {
+  opacity: 1;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.stage-below {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  -webkit-transform: translateY(64px);
+          transform: translateY(64px);
+}
+
 .navbar {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -157,31 +172,32 @@ body h1 {
   position: relative;
   margin: auto;
   z-index: 999;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: 700ms;
+  transition: 700ms;
 }
 
 .title-container-boring .hero-title {
   font-size: 42px;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 700ms;
+  transition: 700ms;
 }
 
 .title-container {
-  position: relative;
+  position: fixed;
   left: 0%;
   right: 0%;
   margin: auto;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  top: 38%;
+  top: 33%;
   z-index: 999;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: 700ms ease;
+  transition: 700ms ease;
 }
 
 .title-container .hero-title {
+  font-weight: normal !important;
   font-size: 42px;
   -webkit-transition: 1s;
   transition: 1s;
@@ -190,7 +206,7 @@ body h1 {
 .title-container-nav {
   position: fixed;
   left: 112px;
-  right: 85%;
+  right: 87%;
   margin: auto;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -198,12 +214,12 @@ body h1 {
   top: 30px;
   text-align: center;
   z-index: 999;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
-  opacity: 0.6;
+  -webkit-transition: 700ms ease;
+  transition: 700ms ease;
 }
 
 .title-container-nav .hero-title {
+  font-weight: normal !important;
   font-size: 18px;
   -webkit-transition: 1s;
   transition: 1s;
@@ -260,6 +276,7 @@ button:hover {
 
 .project-slide h1 {
   text-align: center;
+  font-weight: normal !important;
 }
 
 .bottom-bar {

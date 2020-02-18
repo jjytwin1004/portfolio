@@ -41,6 +41,20 @@ body {
     opacity: 0;
 }
 
+//----------animation stuff----------
+
+.enter {
+    opacity: 1;
+    transition: 600ms;
+}
+
+.stage-below {
+    opacity: 0;
+    pointer-events: none;
+    transition: 300ms;
+    transform: translateY(64px);
+}
+
 //----------navbar----------
 
 .navbar {
@@ -158,27 +172,27 @@ body {
     position: relative;
     margin: auto;
     z-index: 999;
-    transition: 1s ease-in-out;
+    transition: 700ms;
 
     .hero-title {
         //font-weight: normal !important;
         font-size: 42px;
-        transition: 1s;
+        transition: 700ms;
     }
 }
 
 .title-container {
-    position: relative;
+    position: fixed;
     left: 0%;
     right: 0%;
     margin: auto;
     width: max-content;
-    top: 38%;
+    top: 33%;
     z-index: 999;
-    transition: 1s ease-in-out;
+    transition: 700ms ease;
 
     .hero-title {
-        //font-weight: normal !important;
+        font-weight: normal !important;
         font-size: 42px;
         transition: 1s;
     }
@@ -187,16 +201,17 @@ body {
 .title-container-nav {
     position: fixed;
     left: 112px;
-    right: 85%;
+    right: 87%;
     margin: auto;
     width: max-content;
     top: 30px;
     text-align: center;
     z-index: 999;
-    transition: 1s ease-in-out;
-    opacity: 0.6;
+    transition: 700ms ease;
+    //opacity: 0.6;
 
     .hero-title {
+        font-weight: normal !important;
         font-size: 18px;
         transition: 1s;
     }
@@ -258,6 +273,7 @@ button {
 
     h1 {
         text-align: center;
+        font-weight: normal !important;
     }
 }
 

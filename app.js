@@ -41,6 +41,13 @@ new Vue({
             infoAmount: 'More info',
             enter: false,
             exit: false,
+            animation: {
+                normal: "[ enter ? 'enter' : 'exit' ]",
+                fromTop: "",
+                fromRight: "",
+                fromBottom: "",
+                fromLeft: "",
+            },
             options: {
                 //parent: this,
                 afterLoad: this.handleLoad,
