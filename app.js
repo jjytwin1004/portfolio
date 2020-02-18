@@ -21,8 +21,8 @@ new Vue({
     el: "#app",
     firestore() {
         return {
-            /*bio: firebase.firestore().collection("bio"),
-            photos: firebase.firestore().collection("photos"),
+            bio: firebase.firestore().collection("bio"),
+            /*photos: firebase.firestore().collection("photos"),
             filmReel: firebase.firestore().collection("filmReel"),
             items: firebase.firestore().collection("portfolioItems")*/
         }
@@ -47,11 +47,11 @@ new Vue({
                 //parent: this,
                 afterLoad: this.handleLoad,
                 onLeave: this.handleLeave,
-                navigation: true,
+                navigation: false,
                 navigationPosition: 'left',
                 parallax: true,
                 lazyLoading: false,
-                scrollingSpeed: 750,
+                scrollingSpeed: 700,
                 anchors:["home","prototypes","development","animation","logo","photography","art","contact"],
             },
             item: {
@@ -245,12 +245,16 @@ new Vue({
             //console.log("goodbye loader");
             this.displayLoader = false;
         },
-        handleLeave(direction) {
+        handleLeave(destination, direction) {
             //console.log('left');
             this.displayVeil = true;
             this.infoActive = false;
             this.enter = false;
             this.watch = false;
+
+            console.log("going to: " + (direction.index + 1))
+
+            this.currentTab = direction.index + 1;
             //console.log('enter?: ' + this.enter);
 
             //console.log("direction: " + direction);
@@ -260,6 +264,9 @@ new Vue({
         handleLoad(destination, direction) {
             //console.log("Emitted 'after load' event");
             this.enter = true;
+            //console.log(direction.index + 1);
+
+            //this.currentTab = direction.index + 1;
         },
         toggleInfo() {
             if(this.infoActive) {

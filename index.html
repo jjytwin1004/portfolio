@@ -17,7 +17,7 @@
         <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
         
         <!--fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri|Nunito|Roboto+Condensed|Yantramanav&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     </head>
     <body>
         
@@ -33,53 +33,65 @@
                             <div @click="navigate(1)" class="logo"></div>
                     </ul>
                     <ul class="nav-options nav-right">
-                        <li @click="navigate(1)" v-bind:class="[currentTab == 1 ? 'nav-active' : '']">Home</li>
-                        <li @click="navigate(8)" v-bind:class="[currentTab == 8 ? 'nav-active' : '']" class="contact-link">Contact</li>
+                        <li @click="navigate(1)" v-bind:class="[currentTab == 1 ? 'nav-active' : '']"><strong>Home</strong></li>
+                        <li @click="navigate(8)" v-bind:class="[currentTab == 8 ? 'nav-active' : '']" class="contact-link"><strong>Contact</strong></li>
 
                         <li class="divide">|</li>
 
-                        <li @click="navigate(2)" v-bind:class="[currentTab == 2 ? 'nav-active' : '']">Prototypes</li>
+                        <li @click="navigate(2)" v-bind:class="[currentTab == 2 ? 'nav-active' : '']">UX</li>
                         <li @click="navigate(3)" v-bind:class="[currentTab == 3 ? 'nav-active' : '']">Development</li>
                         <li @click="navigate(4)" v-bind:class="[currentTab == 4 ? 'nav-active' : '']">Animation</li>
-                        <li @click="navigate(5)" v-bind:class="[currentTab == 5 ? 'nav-active' : '']">Logo</li>
+                        <li @click="navigate(5)" v-bind:class="[currentTab == 5 ? 'nav-active' : '']">Graphic Design</li>
                         <li @click="navigate(6)" v-bind:class="[currentTab == 6 ? 'nav-active' : '']">Photography</li>
                         <li @click="navigate(7)" v-bind:class="[currentTab == 7 ? 'nav-active' : '']">Art</li>
                     </ul>
                 </div>
             </div>
-            
+
+            <div v-bind:class="[ currentTab > 1 ? 'title-container-nav' : 'title-container'  ]"><h1 class="hero-title">Hailey Jiyoun Jun</h1></div>
 
             <div>
                 <full-page ref="fullpage" :options="options" id="fullpage" :skip-init="true">
                     <div class="section hero-section">
-                        <div class="hero-content">
-                            <h1>Hailey Jiyoun Jun</h1>
-                            <p style="margin-bottom: 18px">UX Designer</p>
+                        <div v-bind:class="[ currentTab > 1 ? 'invisible' : 'visible' ]">
+                            <p style="margin-bottom: 18px; padding-top: 90px;">UX Designer</p>
                             <div class="hero-buttons">
                                 <button class="next" @click="$refs.fullpage.api.moveSectionDown()">View Work<!--div class="arrow"></div--></button>
                             </div>
                         </div>
                     </div>
-                    <div class="section">
+                    <div class="section section-prototypes">
 
                     </div>
-                    <div class="section">
+                    <div class="section section-development">
 
                     </div>
-                    <div class="section">
+                    <div class="section section-animation">
 
                     </div>
-                    <div class="section">
+                    <div class="section section-logo">
 
                     </div>
-                    <div class="section">
+                    <div class="section section-photo">
 
                     </div>
-                    <div class="section">
+                    <div class="section section-art">
 
                     </div>
-                    <div class="section">
-
+                    <div class="section section-contact">
+                        <div class="contact-section section-left">
+                            <!--div class="bio-content">
+                                <div class="portrait-img" v-bind:style="{ backgroundImage: 'url(' + bio[0].photo + ')' }"></div>
+                                <h1>Hailey Jiyoun Jun</h1>
+                                <p class="genre">UX Designer</p>
+                                <p class="summary bio">{{ bio[0].text }}</p>
+                            </div-->
+                            <form class="contact-form">
+                                <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jjytwin1004@gmail.com" target="_blank"><h4 style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-email"></div>jjytwin1004@gmail.com</h4></a><br>
+                                <h4 style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-cv"></div><a href="resume/resume.pdf">View Resume</a></h4>
+                            </form>
+                        </div>
+                        <div class="foot"><p>Coded with <span class="love">♡</span> by <a href="https://tbrew1023.github.io/ux-portfolio" target="_blank">Trent Brew</a></p></div>
                     </div>
                 </full-page>
             </div>

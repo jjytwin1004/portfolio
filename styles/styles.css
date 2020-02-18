@@ -19,8 +19,8 @@ body h1 {
 }
 
 .visible {
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 300s;
+  transition: 300s;
   opacity: 1;
 }
 
