@@ -21,8 +21,8 @@ body h1 {
 .visible {
   -webkit-transition: 700ms;
   transition: 700ms;
-  -webkit-transition-delay: 700ms;
-          transition-delay: 700ms;
+  -webkit-transition-delay: 350ms;
+          transition-delay: 350ms;
   opacity: 1;
 }
 
@@ -153,8 +153,22 @@ body h1 {
   font-size: 24px;
 }
 
+.title-container-boring {
+  position: relative;
+  margin: auto;
+  z-index: 999;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.title-container-boring .hero-title {
+  font-size: 42px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 .title-container {
-  position: fixed;
+  position: relative;
   left: 0%;
   right: 0%;
   margin: auto;

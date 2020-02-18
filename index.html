@@ -48,13 +48,14 @@
                 </div>
             </div>
 
-            <div v-bind:class="[ currentTab > 1 ? 'title-container-nav' : 'title-container'  ]"><h1 class="hero-title">Hailey Jiyoun Jun</h1></div>
+            <!--div class="title-container"><h1 class="hero-title">Hailey Jiyoun Jun</h1></div-->
 
             <div>
                 <full-page ref="fullpage" :options="options" id="fullpage" :skip-init="true">
                     <div class="section hero-section">
                         <div class="hero-content" v-bind:class="[ currentTab > 1 ? 'invisible' : 'visible' ]">
-                            <p class="genre" style="margin-bottom: 18px; padding-top: 90px;">UX Designer</p>
+                            <div class="title-container-boring"><h1 class="hero-title">Hailey Jiyoun Jun</h1></div>
+                            <p class="genre" style="margin-bottom: 18px; padding-top: 0px;">UX Designer</p>
                             <div class="hero-buttons">
                                 <button class="next" @click="$refs.fullpage.api.moveSectionDown()">View Work<!--div class="arrow"></div--></button>
                             </div>
