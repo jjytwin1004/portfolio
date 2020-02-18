@@ -20,9 +20,7 @@ new Vue({
     firestore() {
         return {
             bio: firebase.firestore().collection("bio"),
-            /*photos: firebase.firestore().collection("photos"),
-            filmReel: firebase.firestore().collection("filmReel"),
-            items: firebase.firestore().collection("portfolioItems")*/
+            development: firebase.firestore().collection("development"),
         }
     },
     data(){
@@ -41,13 +39,7 @@ new Vue({
             infoAmount: 'More info',
             enter: false,
             exit: false,
-            animation: {
-                normal: "[ enter ? 'enter' : 'exit' ]",
-                fromTop: "",
-                fromRight: "",
-                fromBottom: "",
-                fromLeft: "",
-            },
+            displayLoader: true,
             options: {
                 //parent: this,
                 afterLoad: this.handleLoad,
@@ -85,26 +77,26 @@ new Vue({
     },
     mounted: function() {
 
-        this.$refs.fullpage.init()
-        this.$refs.fullpage.build()
-
         //----- Loading component and initializing fullpage -----
 
         var parentObj = this
 
-        parentObj.componentsReady();
-        parentObj.removeLoader();
-
         setTimeout(function() {
             //-----set all dynamic content after delay-----
             parentObj.setBio();
-        }, 1000);
+            parentObj.setItems();
+            parentObj.componentsReady();
+            parentObj.removeLoader();
+        }, 2000);
     },
     methods: {
         componentsReady() {
-            var parentObj = this;
-
             console.log('fullpage initialized');
+
+            //----------LOADER DONE----------
+
+            this.$refs.fullpage.init()
+            this.$refs.fullpage.build()
 
             //console.log(parentObj.bio);
 
@@ -119,6 +111,11 @@ new Vue({
             //console.log(parentObj.bio[0].text);
             this.userBio.text = this.bio[0].text;
             this.userBio.photo = this.bio[0].photo;
+        },
+        setItems() {
+            //console.log(this.development[0].title);
+
+            console.log("items set");
         },
         navigate(section) {
             this.$refs.fullpage.api.moveTo(section);

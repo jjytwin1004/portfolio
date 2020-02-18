@@ -23,9 +23,9 @@
         
         <div class = "container" id="app">
 
-            <!--div v-bind:class="[displayLoader ? 'loader-active' : 'loader-inactive']">
+            <div v-bind:class="[displayLoader ? 'loader-active' : 'loader-inactive']">
                 <div class="loader">Loading...</div>
-            </div-->
+            </div>
 
             <div class="navbar">
                 <div class="nav-inner">
@@ -63,19 +63,13 @@
                     </div>
                     <div class="section section-prototypes">
 
-                        <div class="slide project-slide">
+                        <div v-for="(i, index) in development" class="slide project-slide">
                             <div class="center-text">
-                                    <h1 v-bind:class="(enter ? 'enter' : 'stage-below')">Project1</h1>
+                                    <h1 v-bind:class="(enter ? 'enter' : 'stage-below')">{{ development[0].title }}</h1>
                                     <h2 v-bind:class="(enter ? 'enter delay-2' : 'stage-below')">Subheader</h2>
                                     <h3 v-bind:class="(enter ? 'enter delay-4' : 'stage-below')">Extra text</h3>
                             </div>
-                        </div>
-                        <div class="slide project-slide">
-                            <h1>Project2</h1>
-                        </div>
-                        <div class="slide project-slide longboi">
-                            <h1>Project3</h1>
-                        </div>          
+                        </div>         
                         
                         <!--div class="bottom-bar"></div-->
 
