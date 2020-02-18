@@ -488,25 +488,38 @@ video {
   width: 100%;
   margin: 0px;
   height: 60px;
+  padding: 36px;
+}
+
+.navbar .logo {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  background-image: url("../res/logo-main.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
 }
 
 .navbar .nav-inner {
-  padding: 36px 0px 0px 60px;
+  padding-right: 64px;
 }
 
 .navbar .nav-inner a {
   text-decoration: none !important;
 }
 
-.navbar .nav-inner .nav-left {
+.navbar .nav-inner .nav-options {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 0px;
   margin: 0px;
+  float: right;
 }
 
-.navbar .nav-inner .nav-left li {
+.navbar .nav-inner .nav-options li {
   margin: 0px 36px 0px 0px;
   padding: 0px;
   line-height: 60px;
@@ -517,7 +530,7 @@ video {
   transition: 200ms;
 }
 
-.navbar .nav-inner .nav-left li:hover {
+.navbar .nav-inner .nav-options li:hover {
   opacity: 0.3;
 }
 

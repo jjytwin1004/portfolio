@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>Nihal Dantluri</title>
+        <title>Home</title>
         <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
 
         <link rel="icon" type="image/svg" href="res/videocam-24px.svg">
@@ -23,24 +23,24 @@
         
         <div class = "container" id="app">
 
-            <div v-bind:class="[displayLoader ? 'loader-active' : 'loader-inactive']">
+            <!--div v-bind:class="[displayLoader ? 'loader-active' : 'loader-inactive']">
                 <div class="loader">Loading...</div>
-            </div>
+            </div-->
 
             <div class="navbar" v-bind:class="[ watch ? 'invisible' : 'visible' ]">
-
-                    
                 <div class="nav-inner">
-                    <ul class="nav-left">
-                        <li @click="{ $refs.fullpage.api.moveTo(1) }" v-bind:class="[!currentTab ? 'active' : '']">Work</li>
-                        <a href="photos.html"><li @click="">Photo</li></a>
-                        <li @click="{ $refs.fullpage.api.moveTo(items.length + 2) }" v-bind:class="[currentTab ? 'active' : '']" class="contact-link">Contact</li>
+                    <ul class="nav-options">
+                            <div @click="{ $refs.fullpage.api.moveTo(1) }" class="logo"></div>
+                            <li @click="navigate(1)" v-bind:class="[currentTab == 1 ? 'active' : '']">Home</li>
+                            <li @click="" v-bind:class="[currentTab == 8 ? 'active' : '']" class="contact-link">Contact</li>
                     </ul>
-
-                    <ul class="nav-right">
-                        <!--li><a href="https://www.imdb.com/name/nm7577022/?ref_=nv_sr_srsg_0" target="_blank"><div class="social-link imdb"></div></a></li>
-                        <li><a href="https://vimeo.com/nihaldantluri" target="_blank"><div class="social-link vimeo"></div></a></li>
-                        <li><a href="https://www.instagram.com/nihal_dantluri/" target="_blank"><div class="social-link instagram"></div></a></li-->
+                    <ul class="nav-options">
+                        <li @click="navigate(2)" v-bind:class="[currentTab == 2 ? 'active' : '']">Prototypes</li>
+                        <li @click="navigate(3)" v-bind:class="[currentTab == 3 ? 'active' : '']">Development</li>
+                        <li @click="navigate(4)" v-bind:class="[currentTab == 4 ? 'active' : '']">Animation</li>
+                        <li @click="navigate(5)" v-bind:class="[currentTab == 5 ? 'active' : '']">Logo</li>
+                        <li @click="navigate(6)" v-bind:class="[currentTab == 6 ? 'active' : '']">Photography</li>
+                        <li @click="navigate(7)" v-bind:class="[currentTab == 7 ? 'active' : '']">Art</li>
                     </ul>
                 </div>
             </div>
@@ -48,7 +48,16 @@
 
             <div>
                 <full-page ref="fullpage" :options="options" id="fullpage" :skip-init="true">
-                    <h1>Home</h1>
+                    <div class="section hero-section">
+                        <div class="hero-content">
+                                <h1>Hailey Jiyoun Jun</h1>
+                                <p style="margin-bottom: 18px">UX Designer</p>
+                                <div class="hero-buttons">
+                                    <button class="next" @click="$refs.fullpage.api.moveSectionDown()">View Work<!--div class="arrow"></div--></button>
+                                    <button class="watch" @click="$refs.fullpage.api.moveTo(8)">Contact</button>
+                                </div>
+                        </div>
+                    </div>
                 </full-page>
             </div>
         

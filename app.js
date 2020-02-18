@@ -1,11 +1,13 @@
 // Change the configurations.  
 var config = {
-    apiKey: "AIzaSyCHpz4ty7srkDV3AiUDZJLFEOfYGLMpqUM",
-    authDomain: "nihal-819a6.firebaseapp.com",
-    databaseURL: "https://nihal-819a6.firebaseio.com",
-    projectId: "nihal-819a6",
-    storageBucket: "nihal-819a6.appspot.com",
-    messagingSenderId: "489064704671"
+    apiKey: "AIzaSyBvkGOd24ZvrpLYTIjU7moPntfTAEhM23M",
+    authDomain: "jiyoun-8a088.firebaseapp.com",
+    databaseURL: "https://jiyoun-8a088.firebaseio.com",
+    projectId: "jiyoun-8a088",
+    storageBucket: "jiyoun-8a088.appspot.com",
+    messagingSenderId: "522692516536",
+    appId: "1:522692516536:web:83635cdd383ae36d4a724d",
+    measurementId: "G-SBLNZ6E37K"
 }
 
 // Initialize Firebase.
@@ -19,10 +21,10 @@ new Vue({
     el: "#app",
     firestore() {
         return {
-            bio: firebase.firestore().collection("bio"),
+            /*bio: firebase.firestore().collection("bio"),
             photos: firebase.firestore().collection("photos"),
             filmReel: firebase.firestore().collection("filmReel"),
-            items: firebase.firestore().collection("portfolioItems")
+            items: firebase.firestore().collection("portfolioItems")*/
         }
     },
     data(){
@@ -34,16 +36,15 @@ new Vue({
                 subject_html: '',
                 message_html: ''
             },
+            currentTab: 1,
             viewing: "",
             viewOpen: false,
-            currentTab: 1,
             infoActive: false,
             infoAmount: 'More info',
             enter: false,
             exit: false,
             displayLoader: true,
             displayVeil: false,
-            currentTab: 0,
             watch: false,
             vidTime: 85,
             fadingEffect: true,
@@ -81,13 +82,8 @@ new Vue({
 
         var parentObj = this
 
-        //console.log(parentObj.options.anchors);
-
-        setTimeout(function() {
-           // console.log("item count: " + parentObj.items.length);
-            parentObj.componentsReady();
-            parentObj.removeLoader();
-        }, 5000)
+        parentObj.componentsReady();
+        parentObj.removeLoader();
     },
     methods: {
         componentsReady() {
@@ -121,6 +117,10 @@ new Vue({
                 ],
                 // Other config options...
             });*/
+        },
+        navigate(section) {
+            this.$refs.fullpage.api.moveTo(section);
+            this.currentTab = section;
         },
         add() {
             //console.log('clicked')
