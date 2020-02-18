@@ -46,6 +46,8 @@ new Vue({
                 afterLoad: this.handleLoad,
                 onLeave: this.handleLeave,
                 navigation: false,
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
                 navigationPosition: 'left',
                 parallax: true,
                 lazyLoading: false,

@@ -53,7 +53,7 @@
             <div>
                 <full-page ref="fullpage" :options="options" id="fullpage" :skip-init="true">
                     <div class="section hero-section">
-                        <div v-bind:class="[ currentTab > 1 ? 'invisible' : 'visible' ]">
+                        <div class="hero-content" v-bind:class="[ currentTab > 1 ? 'invisible' : 'visible' ]">
                             <p class="genre" style="margin-bottom: 18px; padding-top: 90px;">UX Designer</p>
                             <div class="hero-buttons">
                                 <button class="next" @click="$refs.fullpage.api.moveSectionDown()">View Work<!--div class="arrow"></div--></button>
@@ -61,6 +61,18 @@
                         </div>
                     </div>
                     <div class="section section-prototypes">
+
+                        <div class="slide project-slide">
+                            <h1>Project1</h1>
+                        </div>
+                        <div class="slide project-slide">
+                            <h1>Project2</h1>
+                        </div>
+                        <div class="slide project-slide longboi">
+                            <h1>Project3</h1>
+                        </div>          
+                        
+                        <!--div class="bottom-bar"></div-->
 
                     </div>
                     <div class="section section-development">

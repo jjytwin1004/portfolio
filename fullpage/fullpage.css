@@ -69,7 +69,8 @@
      -ms-user-select: none;
      position: absolute;
      z-index: 4;
-     top: 50%;
+     transform: scale(0.5) !important;
+     bottom: 24px;
      cursor: pointer;
      width: 0;
      height: 0;
@@ -77,18 +78,41 @@
      margin-top: -38px;
      -webkit-transform: translate3d(0, 0, 0);
      -ms-transform: translate3d(0, 0, 0);
-     transform: translate3d(0, 0, 0)
+     transform: translate3d(0, 0, 0);
+     transition: 200ms;
+ }
+
+ .fp-controlArrow:hover {
+     opacity: 0.6;
+ }
+
+ .fp-controlArrow.fp-next::before {
+    content: 'Next Project';
+    position: absolute;
+    transform: scale(2);
+    width: max-content;
+    right: 124px;
+    bottom: -12px;
+ }
+
+ .fp-controlArrow.fp-prev::before {
+    content: 'Last Project';
+    position: absolute;
+    transform: scale(2);
+    width: max-content;
+    left: 124px;
+    bottom: -12px;
  }
  
  .fp-controlArrow.fp-prev {
-     left: 15px;
+     left: 24px;
      width: 0;
      border-width: 38.5px 34px 38.5px 0;
      border-color: transparent #fff transparent transparent
  }
  
  .fp-controlArrow.fp-next {
-     right: 15px;
+     right: 24px;
      border-width: 38.5px 0 38.5px 34px;
      border-color: transparent transparent transparent #fff
  }
@@ -136,13 +160,14 @@
      -webkit-transform: translate3d(0, 0, 0);
      -ms-transform: translate3d(0, 0, 0);
      transform: translate3d(0, 0, 0);
-     left: 0!important;
-     right: 0;
-     margin: 0 auto!important
+     left: 0px;
+     right: 0px;
+     width: max-content;
+     margin: auto;
  }
  
  .fp-slidesNav.fp-bottom {
-     bottom: 17px
+     bottom: 42px
  }
  
  .fp-slidesNav.fp-top {
