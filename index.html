@@ -80,18 +80,19 @@
                     </div>
                     <div class="section section-contact">
                         <div class="contact-section section-left">
-                            <!--div class="bio-content">
-                                <div class="portrait-img" v-bind:style="{ backgroundImage: 'url(' + bio[0].photo + ')' }"></div>
+                            <div class="bio-content">
+                                <div class="portrait-img" v-bind:style="{ backgroundImage: 'url(' + userBio.photo + ')' }"></div>
                                 <h1>Hailey Jiyoun Jun</h1>
                                 <p class="genre">UX Designer</p>
-                                <p class="summary bio">{{ bio[0].text }}</p>
-                            </div-->
+                                <p class="summary bio">{{ userBio.text }}</p>
+                            </div>
                             <form class="contact-form">
                                 <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jjytwin1004@gmail.com" target="_blank"><h4 style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-email"></div>jjytwin1004@gmail.com</h4></a><br>
-                                <h4 style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-cv"></div><a href="resume/resume.pdf">View Resume</a></h4>
+                                <a href="https://www.instagram.com/duxadepauluniversity/"><h4 style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-insta"></div>@jjytwin1004</h4></a>
+                                <a href="resume/resume.pdf"><h4 style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-cv"></div>Resume</h4></a>
                             </form>
                         </div>
-                        <div class="foot"><p>Coded with <span class="love">♡</span> by <a href="https://tbrew1023.github.io/ux-portfolio" target="_blank">Trent Brew</a></p></div>
+                        <div class="foot"><p>copyright © 2019 - Jiyoun Jun</p></div>
                     </div>
                 </full-page>
             </div>
@@ -108,11 +109,6 @@
         <script src="https://unpkg.com/vue-firestore"></script>
         <!-- storage -->
         <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-storage.js"></script>
-        <!-- emailjs -->
-        <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
-        </script>
-        <script type="text/javascript">(function(){emailjs.init("user_kTZviK8cM7UnEbWOUl1bX");})();</script>
         <!-- fullpage-->
         <script src="fullpage/fullpage.js"></script>
         <!-- app -->

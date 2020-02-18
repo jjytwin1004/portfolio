@@ -5,9 +5,7 @@ var config = {
     databaseURL: "https://jiyoun-8a088.firebaseio.com",
     projectId: "jiyoun-8a088",
     storageBucket: "jiyoun-8a088.appspot.com",
-    messagingSenderId: "522692516536",
-    appId: "1:522692516536:web:83635cdd383ae36d4a724d",
-    measurementId: "G-SBLNZ6E37K"
+    messagingSenderId: "522692516536"
 }
 
 // Initialize Firebase.
@@ -52,7 +50,12 @@ new Vue({
                 parallax: true,
                 lazyLoading: false,
                 scrollingSpeed: 700,
-                anchors:["home","prototypes","development","animation","logo","photography","art","contact"],
+                anchors:["home","ux","development","animation","graphicdesign","photography","art","contact"],
+            },
+            userBio: {
+                photo: "",
+                resumeLink: "",
+                text: "o hai"
             },
             item: {
                 title: "",
@@ -73,24 +76,40 @@ new Vue({
     },
     mounted: function() {
 
+        this.$refs.fullpage.init()
+        this.$refs.fullpage.build()
+
         //----- Loading component and initializing fullpage -----
 
         var parentObj = this
 
         parentObj.componentsReady();
         parentObj.removeLoader();
+
+        setTimeout(function() {
+            //-----set all dynamic content after delay-----
+            parentObj.setBio();
+        }, 1000);
     },
     methods: {
         componentsReady() {
-            this.$refs.fullpage.init()
-            this.$refs.fullpage.build()
+            var parentObj = this;
+
             console.log('fullpage initialized');
+
+            //console.log(parentObj.bio);
+
             /*ui.start('#firebaseui-auth-container', {
                 signInOptions: [
                   firebase.auth.EmailAuthProvider.PROVIDER_ID
                 ],
                 // Other config options...
             });*/
+        },
+        setBio() {
+            //console.log(parentObj.bio[0].text);
+            this.userBio.text = this.bio[0].text;
+            this.userBio.photo = this.bio[0].photo;
         },
         navigate(section) {
             this.$refs.fullpage.api.moveTo(section);
@@ -266,7 +285,11 @@ new Vue({
             this.enter = true;
             //console.log(direction.index + 1);
 
-            //this.currentTab = direction.index + 1;
+            this.currentTab = direction.index + 1;
+
+            //this.$forceUpdate();
+
+            console.log("forced update");
         },
         toggleInfo() {
             if(this.infoActive) {

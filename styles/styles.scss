@@ -30,12 +30,13 @@ body {
 }
 
 .visible {
-    transition: 300s;
+    transition: 500ms;
+    transition-delay: 700ms;
     opacity: 1;
 }
 
 .invisible {
-    transition: 300ms;
+    transition: 500ms;
     opacity: 0;
 }
 
@@ -160,11 +161,12 @@ body {
     width: max-content;
     top: 38%;
     z-index: 999;
-    transition: 700ms;
+    transition: 1s ease-in-out;
 
     .hero-title {
         font-weight: normal !important;
         font-size: 42px;
+        transition: 1s;
     }
 }
 
@@ -177,10 +179,11 @@ body {
     top: 30px;
     text-align: center;
     z-index: 999;
-    transition: 700ms;
+    transition: 1s ease-in-out;
 
     .hero-title {
         font-size: 18px;
+        transition: 1s;
     }
 }
 
@@ -278,20 +281,31 @@ a {
     background-image: url('../res/icons/description-24px.svg');
 }
 
+.icon-insta {
+    background-image: url('../res/icons/insta.png');
+    transform: scale(0.7);
+}
+
 .portrait-img {
     background: gray;
     width: 150px;
     height: 150px;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     margin-bottom: 36px;
+    border-radius: 100%;
+
 }
 
 .bio {
     font-size: 18px;
     font-weight: normal;
     width: 75%;
+}
+
+.contact-form {
+    width: 20%;
 }
 
 .contact-footer {
@@ -314,8 +328,9 @@ a {
     align-items: center;
 }
 
-
-
+.genre {
+    opacity: 0.6;
+}
 
 
 .foot {
@@ -365,7 +380,6 @@ a {
 
     .contact-form {
         padding: 12px 24px 12px 24px;
-        width: 72%;
 
         h4 {
             font-size: 14px !important;

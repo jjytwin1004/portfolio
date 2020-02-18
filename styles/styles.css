@@ -19,14 +19,16 @@ body h1 {
 }
 
 .visible {
-  -webkit-transition: 300s;
-  transition: 300s;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  -webkit-transition-delay: 700ms;
+          transition-delay: 700ms;
   opacity: 1;
 }
 
 .invisible {
-  -webkit-transition: 300ms;
-  transition: 300ms;
+  -webkit-transition: 500ms;
+  transition: 500ms;
   opacity: 0;
 }
 
@@ -161,13 +163,15 @@ body h1 {
   width: max-content;
   top: 38%;
   z-index: 999;
-  -webkit-transition: 700ms;
-  transition: 700ms;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .title-container .hero-title {
   font-weight: normal !important;
   font-size: 42px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .title-container-nav {
@@ -181,12 +185,14 @@ body h1 {
   top: 30px;
   text-align: center;
   z-index: 999;
-  -webkit-transition: 700ms;
-  transition: 700ms;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .title-container-nav .hero-title {
   font-size: 18px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 button {
@@ -287,20 +293,31 @@ a {
   background-image: url("../res/icons/description-24px.svg");
 }
 
+.icon-insta {
+  background-image: url("../res/icons/insta.png");
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
 .portrait-img {
   background: gray;
   width: 150px;
   height: 150px;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   margin-bottom: 36px;
+  border-radius: 100%;
 }
 
 .bio {
   font-size: 18px;
   font-weight: normal;
   width: 75%;
+}
+
+.contact-form {
+  width: 20%;
 }
 
 .contact-footer {
@@ -327,6 +344,10 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.genre {
+  opacity: 0.6;
 }
 
 .foot {
@@ -370,7 +391,6 @@ a {
   }
   .contact-form {
     padding: 12px 24px 12px 24px;
-    width: 72%;
   }
   .contact-form h4 {
     font-size: 14px !important;
