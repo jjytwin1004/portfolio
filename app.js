@@ -21,6 +21,7 @@ new Vue({
         return {
             bio: firebase.firestore().collection("bio"),
             development: firebase.firestore().collection("development"),
+            ux: firebase.firestore().collection("ux"),
         }
     },
     data(){
@@ -87,7 +88,7 @@ new Vue({
             parentObj.setItems();
             parentObj.componentsReady();
             parentObj.removeLoader();
-        }, 1000);
+        }, 2000);
     },
     methods: {
         componentsReady() {

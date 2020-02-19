@@ -84,13 +84,35 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section section-prototypes">
+                    <div class="section section-ux">
 
-                        <div v-for="(i, index) in development" class="slide project-slide">
-                            <div class="center-text">
-                                    <h1 v-bind:class="(enter ? 'enter' : 'stage-below')">{{ development[index].title }}</h1>
+                        <div v-for="(i, index) in ux" class="slide project-slide">
+                            <div class="ux-container">
+                                    <!--h1 v-bind:class="(enter ? 'enter' : 'stage-below')">{{ development[index].title }}</h1>
                                     <h2 v-bind:class="(enter ? 'enter delay-2' : 'stage-below')">Subheader</h2>
-                                    <h3 v-bind:class="(enter ? 'enter delay-4' : 'stage-below')">Extra text</h3>
+                                    <h3 v-bind:class="(enter ? 'enter delay-4' : 'stage-below')">Extra text</h3-->
+
+                                    <div class="ux-left" v-bind:class="( enter ? 'enter delay-2' : 'stage-left' )">
+                                        <div class="ux-thumbnail" v-bind:style="{ backgroundImage: 'url(' + ux[0].imageSrc + ')' }"></div>
+                                        <h2>{{ ux[index].title }}</h2>
+                                        <p class="subtitle">{{ ux[index].subtitle }}</p>
+                                        <a :href="ux[index].caseStudyLink"><button class="next project-button">View Case Study</button></a>
+                                    </div>
+                                    <div class="ux-right">
+                                        <div class="summary-container" v-bind:class="( enter ? 'enter delay-4' : 'stage-right' )">
+                                            <h2>Project Summary</h2>
+                                            <div class="ux-summary project-text">{{ ux[index].summary }}</div>
+                                        </div>
+                                        <div class="process-container" v-bind:class="( enter ? 'enter delay-6' : 'stage-right' )">
+                                            <h2>Creative Process</h2>
+                                            <div class="ux-process project-text">{{ ux[index].creativeProcess }}</div>
+                                        </div>
+                                        <div class="results-container" v-bind:class="( enter ? 'enter delay-8' : 'stage-right' )">
+                                            <h2>Results</h2>
+                                            <div class="ux-results project-text">{{ ux[index].results }}</div>
+                                        </div>
+                                    </div>
+
                             </div>
                         </div>         
                         

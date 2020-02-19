@@ -176,37 +176,41 @@ $timing: ease;
 
 //----------animation stuff----------
 
+$stageSpeed: 200ms;
+$enterSpeed: 700ms;
+$stageDistance: 32px;
+
 .enter {
     opacity: 1;
-    transition: opacity 600ms ease, transform 600ms ease;
+    transition: opacity $enterSpeed ease, transform $enterSpeed ease;
 }
 
 .stage-below {
     opacity: 0;
     pointer-events: none;
-    transition: 300ms;
-    transform: translateY(64px);
+    transition: $stageSpeed;
+    transform: translateY($stageDistance);
 }
 
 .stage-above {
     opacity: 0;
     pointer-events: none;
-    transition: 300ms;
-    transform: translateY(-64px);
+    transition: $stageSpeed;
+    transform: translateY(-$stageDistance);
 }
 
 .stage-right {
     opacity: 0;
     pointer-events: none;
-    transition: 300ms;
-    transform: translateX(64px);
+    transition: $stageSpeed;
+    transform: translateX($stageDistance);
 }
 
 .stage-left {
     opacity: 0;
     pointer-events: none;
-    transition: 300ms;
-    transform: translateX(-64px);
+    transition: $stageSpeed;
+    transform: translateX(-$stageDistance);
 }
 
 .redboi {
@@ -235,6 +239,30 @@ $timing: ease;
 
 .delay-6 {
     transition-delay: 600ms;
+}
+
+.delay-7 {
+    transition-delay: 700ms;
+}
+
+.delay-8 {
+    transition-delay: 800ms;
+}
+
+.delay-9 {
+    transition-delay: 900ms;
+}
+
+.delay-10 {
+    transition-delay: 1000ms;
+}
+
+.delay-11 {
+    transition-delay: 1100ms;
+}
+
+.delay-12 {
+    transition-delay: 1200ms;
 }
 
 //----------navbar----------
@@ -368,6 +396,8 @@ $timing: ease;
     }
 }
 
+$swoopDuration: 1s;
+
 .title-container {
     position: fixed;
     left: 0%;
@@ -376,27 +406,27 @@ $timing: ease;
     width: max-content;
     top: 36%;
     z-index: 2999;
-    transition: 700ms ease;
+    transition: $swoopDuration ease;
 
     .hero-title {
-        transition: 700ms;
+        transition: $swoopDuration;
     }
 }
 
 .title-container-nav {
     position: fixed;
     left: 24px;
-    right: 87%;
+    right: 82%;
     margin: auto;
     width: max-content;
     top: 22px;
     text-align: center;
     z-index: 2999;
-    transition: 700ms ease;
+    transition: $swoopDuration ease;
     //opacity: 0.6;
 
     .hero-title {
-        transition: 700ms;
+        transition: $swoopDuration;
         transform: scale(0.42) !important;
     }
 }
@@ -426,7 +456,7 @@ button {
     //z-index: 99999;
 }
 
-.section-prototypes {
+.section-ux {
     background: $colorDark;
 }
 
@@ -472,6 +502,51 @@ button {
     width: 100%;
     position: absolute;
     bottom: 0px;
+}
+
+//----------ux projects----------
+
+.ux-container {
+    //position: absolute;
+    //width: 80%;
+    //height: 80%;
+    //background: red;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 212px;
+
+    .ux-left {
+        margin-right: 64px;
+        width: 180%
+    }
+
+    .ux-thumbnail {
+        //background: gray;
+        border-radius: 12px;
+        padding-top: 50%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .project-text {
+        opacity: 0.6;
+    }
+
+
+}
+
+//----------general-projects----------
+
+.subtitle {
+    opacity: 0.6;
+    font-size: 18px;     
+    margin-bottom: 24px;   
+}
+
+.project-button {
+    margin:0px;
 }
 
 //---------- end of projects ----------

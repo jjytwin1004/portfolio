@@ -208,46 +208,46 @@ body h1 {
 
 .enter {
   opacity: 1;
-  -webkit-transition: opacity 600ms ease, -webkit-transform 600ms ease;
-  transition: opacity 600ms ease, -webkit-transform 600ms ease;
-  transition: opacity 600ms ease, transform 600ms ease;
-  transition: opacity 600ms ease, transform 600ms ease, -webkit-transform 600ms ease;
+  -webkit-transition: opacity 700ms ease, -webkit-transform 700ms ease;
+  transition: opacity 700ms ease, -webkit-transform 700ms ease;
+  transition: opacity 700ms ease, transform 700ms ease;
+  transition: opacity 700ms ease, transform 700ms ease, -webkit-transform 700ms ease;
 }
 
 .stage-below {
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-  -webkit-transform: translateY(64px);
-          transform: translateY(64px);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  -webkit-transform: translateY(32px);
+          transform: translateY(32px);
 }
 
 .stage-above {
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-  -webkit-transform: translateY(-64px);
-          transform: translateY(-64px);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  -webkit-transform: translateY(-32px);
+          transform: translateY(-32px);
 }
 
 .stage-right {
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-  -webkit-transform: translateX(64px);
-          transform: translateX(64px);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  -webkit-transform: translateX(32px);
+          transform: translateX(32px);
 }
 
 .stage-left {
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-  -webkit-transform: translateX(-64px);
-          transform: translateX(-64px);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  -webkit-transform: translateX(-32px);
+          transform: translateX(-32px);
 }
 
 .redboi {
@@ -282,6 +282,36 @@ body h1 {
 .delay-6 {
   -webkit-transition-delay: 600ms;
           transition-delay: 600ms;
+}
+
+.delay-7 {
+  -webkit-transition-delay: 700ms;
+          transition-delay: 700ms;
+}
+
+.delay-8 {
+  -webkit-transition-delay: 800ms;
+          transition-delay: 800ms;
+}
+
+.delay-9 {
+  -webkit-transition-delay: 900ms;
+          transition-delay: 900ms;
+}
+
+.delay-10 {
+  -webkit-transition-delay: 1000ms;
+          transition-delay: 1000ms;
+}
+
+.delay-11 {
+  -webkit-transition-delay: 1100ms;
+          transition-delay: 1100ms;
+}
+
+.delay-12 {
+  -webkit-transition-delay: 1200ms;
+          transition-delay: 1200ms;
 }
 
 .navbar {
@@ -434,19 +464,19 @@ body h1 {
   width: max-content;
   top: 36%;
   z-index: 2999;
-  -webkit-transition: 700ms ease;
-  transition: 700ms ease;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .title-container .hero-title {
-  -webkit-transition: 700ms;
-  transition: 700ms;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .title-container-nav {
   position: fixed;
   left: 24px;
-  right: 87%;
+  right: 82%;
   margin: auto;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -454,13 +484,13 @@ body h1 {
   top: 22px;
   text-align: center;
   z-index: 2999;
-  -webkit-transition: 700ms ease;
-  transition: 700ms ease;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .title-container-nav .hero-title {
-  -webkit-transition: 700ms;
-  transition: 700ms;
+  -webkit-transition: 1s;
+  transition: 1s;
   -webkit-transform: scale(0.42) !important;
           transform: scale(0.42) !important;
 }
@@ -490,7 +520,7 @@ button:hover {
   font-size: 64px;
 }
 
-.section-prototypes {
+.section-ux {
   background: #131417;
 }
 
@@ -524,6 +554,46 @@ button:hover {
   width: 100%;
   position: absolute;
   bottom: 0px;
+}
+
+.ux-container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 212px;
+}
+
+.ux-container .ux-left {
+  margin-right: 64px;
+  width: 180%;
+}
+
+.ux-container .ux-thumbnail {
+  border-radius: 12px;
+  padding-top: 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ux-container .project-text {
+  opacity: 0.6;
+}
+
+.subtitle {
+  opacity: 0.6;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.project-button {
+  margin: 0px;
 }
 
 .bio-content {
