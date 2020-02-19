@@ -529,31 +529,19 @@ button:hover {
 }
 
 .section-animation {
-  background: rgba(33, 34, 37, 0.8);
+  background: #131417;
 }
 
 .section-logo {
-  background: rgba(33, 34, 37, 0.6);
+  background: #212225;
 }
 
 .section-photo {
-  background: rgba(33, 34, 37, 0.4);
+  background: #131417;
 }
 
 .section-art {
-  background: rgba(33, 34, 37, 0.2);
-}
-
-.project-slide h1 {
-  font-weight: normal !important;
-}
-
-.bottom-bar {
   background: #212225;
-  height: 120px;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
 }
 
 .ux-container {
@@ -566,7 +554,6 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 212px;
 }
 
 .ux-container .ux-left {
@@ -575,6 +562,7 @@ button:hover {
 }
 
 .ux-container .ux-thumbnail {
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding-top: 50%;
   background-size: contain;
@@ -594,6 +582,36 @@ button:hover {
 
 .project-button {
   margin: 0px;
+}
+
+.project-container {
+  padding: 260px;
+  padding-top: 200px;
+}
+
+.bottom-nav {
+  cursor: pointer;
+  z-index: 888;
+}
+
+.project-slide h1 {
+  font-weight: normal !important;
+}
+
+.bottom-bar {
+  height: 120px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .bio-content {
@@ -680,7 +698,7 @@ a {
 }
 
 .section-left {
-  background: #101010;
+  background: #131417;
   width: 100%;
   height: 100vh;
   margin: 0px;
@@ -704,7 +722,7 @@ a {
 
 .foot {
   position: absolute;
-  background: black;
+  background: #212225;
   width: 100%;
   bottom: 0px;
   text-align: center;

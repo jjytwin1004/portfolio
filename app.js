@@ -45,6 +45,7 @@ new Vue({
                 //parent: this,
                 afterLoad: this.handleLoad,
                 onLeave: this.handleLeave,
+                onSlideLeave: this.handleSlideLeave,
                 navigation: false,
                 slidesNavigation: true,
                 slidesNavPosition: 'bottom',
@@ -57,7 +58,7 @@ new Vue({
             userBio: {
                 photo: "",
                 resumeLink: "",
-                text: "o hai"
+                text: ""
             },
             item: {
                 title: "",
@@ -286,6 +287,10 @@ new Vue({
             //console.log("direction: " + direction);
 
             //console.log('begin animation');
+        },
+        handleSlideLeave(section, origin, destination, direction) {
+            console.log("going to slide: " + (destination.index + 1));
+            //console.log("amount of slides: " + );
         },
         handleLoad(destination, direction) {
             //console.log("Emitted 'after load' event");

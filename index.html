@@ -87,13 +87,13 @@
                     <div class="section section-ux">
 
                         <div v-for="(i, index) in ux" class="slide project-slide">
-                            <div class="ux-container">
+                            <div class="ux-container project-container">
                                     <!--h1 v-bind:class="(enter ? 'enter' : 'stage-below')">{{ development[index].title }}</h1>
                                     <h2 v-bind:class="(enter ? 'enter delay-2' : 'stage-below')">Subheader</h2>
                                     <h3 v-bind:class="(enter ? 'enter delay-4' : 'stage-below')">Extra text</h3-->
 
                                     <div class="ux-left" v-bind:class="( enter ? 'enter delay-2' : 'stage-left' )">
-                                        <div class="ux-thumbnail" v-bind:style="{ backgroundImage: 'url(' + ux[0].imageSrc + ')' }"></div>
+                                        <div class="ux-thumbnail" v-bind:style="{ backgroundImage: 'url(' + ux[index].imageSrc + ')' }"></div>
                                         <h2>{{ ux[index].title }}</h2>
                                         <p class="subtitle">{{ ux[index].subtitle }}</p>
                                         <a :href="ux[index].caseStudyLink"><button class="next project-button">View Case Study</button></a>
@@ -116,23 +116,46 @@
                             </div>
                         </div>         
                         
-                        <!--div class="bottom-bar"></div-->
+                        <div class="bottom-bar bb1">
+                            <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Development</div>
+                        </div>
 
                     </div>
                     <div class="section section-development">
 
+
+                            <div class="bottom-bar bb2">
+                                    <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Animation</div>
+                                </div>
+
                     </div>
                     <div class="section section-animation">
 
+
+                            <div class="bottom-bar bb1">
+                                    <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Graphic Design</div>
+                                </div>
                     </div>
                     <div class="section section-logo">
 
+
+                            <div class="bottom-bar bb2">
+                                    <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Photography</div>
+                                </div>
                     </div>
                     <div class="section section-photo">
 
+
+                            <div class="bottom-bar bb1">
+                                    <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Art</div>
+                                </div>
                     </div>
                     <div class="section section-art">
 
+
+                            <div class="bottom-bar bb2">
+                                    <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Contact</div>
+                                </div>
                     </div>
                     <div class="section section-contact">
                         <div class="contact-section section-left">
