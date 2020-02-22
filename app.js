@@ -271,6 +271,8 @@ new Vue({
         removeLoader() {
             //console.log("goodbye loader");
             this.displayLoader = false;
+
+            console.log("Loader finished!!!!!!!!! :)");
         },
         handleLeave(destination, direction) {
             //console.log('left');

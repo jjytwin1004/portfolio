@@ -13,6 +13,7 @@ body {
     //font-family: 'Nunito', sans-serif;
     //font-family: 'Hind Siliguri', sans-serif;
     font-family: 'Nunito', sans-serif;
+    //font-family: 'Noto Sans KR', ;
     background: black;
     color: white;
 
@@ -363,6 +364,11 @@ $stageDistance: 32px;
     background: gray;
     //filter: contrast(0.7);
 
+    background-image: url('../res/wave3.png');
+    background-position: center;
+    background-size: 140%;
+    background-repeat: no-repeat;
+
     .hero-buttons {
         display: flex;
         justify-content: center;
@@ -490,23 +496,51 @@ button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    transition: 300ms;
 
     .ux-left {
-        margin-right: 64px;
+        margin-right: 48px;
         width: 180%
     }
 
+    .thumb-inner {
+        //width: 100%;
+        width: 600px;
+        transition: 300ms;
+    
+        h2 {
+            text-align: center;
+            position: absolute;
+            margin: auto;
+            font-size: 36px;
+            width: inherit;
+            margin-top: -224px;
+        }
+    }
+
     .ux-thumbnail {
-        background: rgba(255,255,255,0.05);
+        //background: rgba(255,255,255,0.05);
+        filter: blur(0px) brightness(0.35);
         border-radius: 12px;
-        padding-top: 50%;
-        background-size: contain;
+        //padding-top: 52.65%;
+        height: 350px;
+        background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;
+        cursor: pointer;
+        transition-delay: 0ms;
+        transition: 500ms;
+
+        &:hover {
+            filter:blur(12px) brightness(0.35);
+            background-size: 120%;
+            transition: 500ms;
+        }
     }
 
     .project-text {
         opacity: 0.6;
+
     }
 
 
@@ -522,12 +556,13 @@ button {
 
 .project-button {
     margin:0px;
+    margin-top: 24px;
 }
 
 .project-container {
     //background: blue;
-    padding: 260px;
-    padding-top:200px;
+    padding: 260px 360px 260px 360px;
+    //padding-top:200px;
 }
 
 .bottom-nav {
@@ -542,8 +577,11 @@ button {
     //background: red;
 
     h1 {
-        //text-align: center;
+        text-align: center;
         font-weight: normal !important;
+        top:0px;
+        bottom: 0px;
+        margin: auto;
     }
 }
 

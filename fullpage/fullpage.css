@@ -96,7 +96,7 @@
  }
 
  .fp-controlArrow.fp-prev::before {
-    content: 'Last Project';
+    content: 'Prev Project';
     position: absolute;
     transform: scale(2);
     width: max-content;
@@ -105,14 +105,16 @@
  }
  
  .fp-controlArrow.fp-prev {
-     left: 24px;
+     top: 50%;
+     left: 48px;
      width: 0;
      border-width: 38.5px 34px 38.5px 0;
      border-color: transparent #fff transparent transparent
  }
  
  .fp-controlArrow.fp-next {
-     right: 24px;
+    top: 50%;
+     right: 48px;
      border-width: 38.5px 0 38.5px 34px;
      border-color: transparent transparent transparent #fff
  }

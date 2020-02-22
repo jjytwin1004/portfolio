@@ -18,6 +18,7 @@
         
         <!--fonts-->
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     </head>
     <body>
         
@@ -88,74 +89,73 @@
 
                         <div v-for="(i, index) in ux" class="slide project-slide">
                             <div class="ux-container project-container">
-                                    <!--h1 v-bind:class="(enter ? 'enter' : 'stage-below')">{{ development[index].title }}</h1>
-                                    <h2 v-bind:class="(enter ? 'enter delay-2' : 'stage-below')">Subheader</h2>
-                                    <h3 v-bind:class="(enter ? 'enter delay-4' : 'stage-below')">Extra text</h3-->
 
                                     <div class="ux-left" v-bind:class="( enter ? 'enter delay-2' : 'stage-left' )">
-                                        <div class="ux-thumbnail" v-bind:style="{ backgroundImage: 'url(' + ux[index].imageSrc + ')' }"></div>
-                                        <h2>{{ ux[index].title }}</h2>
-                                        <p class="subtitle">{{ ux[index].subtitle }}</p>
-                                        <a :href="ux[index].caseStudyLink"><button class="next project-button">View Case Study</button></a>
+                                        <div class="thumb-container">
+                                            <div class="thumb-inner">
+                                                <div class="ux-thumbnail" v-bind:style="{ backgroundImage: 'url(' + ux[index].imageSrc + ')' }"></div>
+                                                <h2 v-bind:class="( enter ? 'enter delay-4' : 'stage-left')">{{ ux[index].title }}
+                                                        <br><a :href="ux[index].caseStudyLink" ><button class="next project-button" v-bind:class="( enter ? 'enter delay-8' : 'stage-left' )">View Case Study</button></a>
+                                                </h2>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="ux-right">
-                                        <div class="summary-container" v-bind:class="( enter ? 'enter delay-4' : 'stage-right' )">
-                                            <h2>Project Summary</h2>
+
+                                        <div class="summary-container" v-bind:class="( enter ? 'enter delay-6' : 'stage-right' )">
                                             <div class="ux-summary project-text">{{ ux[index].summary }}</div>
-                                        </div>
-                                        <div class="process-container" v-bind:class="( enter ? 'enter delay-6' : 'stage-right' )">
-                                            <h2>Creative Process</h2>
-                                            <div class="ux-process project-text">{{ ux[index].creativeProcess }}</div>
-                                        </div>
-                                        <div class="results-container" v-bind:class="( enter ? 'enter delay-8' : 'stage-right' )">
-                                            <h2>Results</h2>
-                                            <div class="ux-results project-text">{{ ux[index].results }}</div>
                                         </div>
                                     </div>
 
                             </div>
-                        </div>         
+                        </div>    
                         
-                        <div class="bottom-bar bb1">
+                        <div class="slide" style="display: none"></div>
+                        
+                        <!--div class="bottom-bar bb1">
                             <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Development</div>
-                        </div>
+                        </div-->
 
                     </div>
                     <div class="section section-development">
-
-
-                            <div class="bottom-bar bb2">
-                                    <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Animation</div>
+                        <div v-for="(i, index) in ux" class="slide project-slide">
+                                <div class="ux-container project-container">
+    
+                                        <div class="ux-left" v-bind:class="( enter ? 'enter delay-2' : 'stage-left' )">
+                                            <div class="thumb-container">
+                                                <div class="thumb-inner">
+                                                        <div class="ux-thumbnail" v-bind:style="{ backgroundImage: 'url(' + development[index].imageSrc + ')' }"></div>
+                                                        <h2 v-bind:class="( enter ? 'enter delay-4' : 'stage-left')">{{ development[index].title }}</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ux-right">
+    
+                                            <div class="summary-container" v-bind:class="( enter ? 'enter delay-6' : 'stage-right' )">
+                                                <div class="ux-summary project-text">{{ development[index].summary }}</div>
+                                            </div>
+                                            <a :href="ux[index].caseStudyLink" ><button class="next project-button" v-bind:class="( enter ? 'enter delay-8' : 'stage-right' )">View Case Study</button></a>
+                                        </div>
+    
                                 </div>
-
+                            </div>    
+                        <div class="slide" style="display: none"></div>
                     </div>
                     <div class="section section-animation">
 
 
-                            <div class="bottom-bar bb1">
-                                    <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Graphic Design</div>
-                                </div>
                     </div>
                     <div class="section section-logo">
 
-
-                            <div class="bottom-bar bb2">
-                                    <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Photography</div>
-                                </div>
                     </div>
                     <div class="section section-photo">
 
 
-                            <div class="bottom-bar bb1">
-                                    <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Art</div>
-                                </div>
+
                     </div>
                     <div class="section section-art">
 
 
-                            <div class="bottom-bar bb2">
-                                    <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Contact</div>
-                                </div>
                     </div>
                     <div class="section section-contact">
                         <div class="contact-section section-left">
