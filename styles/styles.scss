@@ -548,7 +548,7 @@ button {
     background: $colorDark;
 }
 
-.section-logo {
+.section-gd {
     background: $colorMain;
 }
 
@@ -597,7 +597,7 @@ button {
 
         &:hover {
             .thumbnail {
-                filter:blur(12px) brightness(0.35);
+                filter:blur(8px) brightness(0.35);
                 transform: scale(0.9);
                 transition: 500ms;
             }
@@ -627,8 +627,53 @@ button {
         opacity: 0.6;
         line-height: 1.5;
     }
+}
 
+//----------gd projects----------
 
+.section-gd {
+    //background: red;
+}
+
+.gd-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.gd-project {
+    //background: blue;
+    display: flex;
+    height: 50%;
+    width: 70%;
+}
+
+.grid-piece-container {
+    background: white;
+    width: 100%;
+    height: 100%;
+    margin:12px;
+    border-radius: 12px;
+    cursor: pointer;
+
+    .gd-piece {
+        background-size: 110%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        border-radius: 12px;
+        transition: 350ms;
+    }
+
+    &:hover {
+        .gd-piece {
+            background-size: 130%;
+            filter: brightness(0.8);
+        }
+    }
 }
 
 //----------general-projects----------
@@ -823,7 +868,6 @@ a {
 }
 
 .portrait-img {
-    background: gray;
     background: gray;
     width: 150px;
     height: 150px;

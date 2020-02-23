@@ -636,7 +636,7 @@ button:hover {
   background: #131417;
 }
 
-.section-logo {
+.section-gd {
   background: #212225;
 }
 
@@ -687,8 +687,8 @@ button:hover {
 }
 
 .ux-container .thumb-container:hover .thumbnail, .development-container .thumb-container:hover .thumbnail {
-  -webkit-filter: blur(12px) brightness(0.35);
-          filter: blur(12px) brightness(0.35);
+  -webkit-filter: blur(8px) brightness(0.35);
+          filter: blur(8px) brightness(0.35);
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
   -webkit-transition: 500ms;
@@ -718,6 +718,54 @@ button:hover {
 .ux-container .project-text, .development-container .project-text {
   opacity: 0.6;
   line-height: 1.5;
+}
+
+.gd-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.gd-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50%;
+  width: 70%;
+}
+
+.grid-piece-container {
+  background: white;
+  width: 100%;
+  height: 100%;
+  margin: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.grid-piece-container .gd-piece {
+  background-size: 110%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+}
+
+.grid-piece-container:hover .gd-piece {
+  background-size: 130%;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
 }
 
 .subtitle {
@@ -1004,7 +1052,6 @@ a {
 }
 
 .portrait-img {
-  background: gray;
   background: gray;
   width: 150px;
   height: 150px;

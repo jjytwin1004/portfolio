@@ -180,8 +180,14 @@
                         </div>
 
                     </div>
-                    <div class="section section-logo">
-
+                    <div class="section section-gd">
+                        <div class="gd-container">
+                            <div class="gd-project">
+                                <div v-for="(i, index) in gd" class="grid-piece-container" v-bind:id="'gd' + index" v-bind:class="( enter ? ('enter delay-' + index) : 'stage-grow' )">
+                                    <div @click="toggleWindow" class="gd-piece" v-bind:style="{ backgroundImage: 'url( ' + i.src + ')' }"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="section section-photo">
  

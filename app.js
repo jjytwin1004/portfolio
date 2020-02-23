@@ -23,7 +23,8 @@ new Vue({
             development: firebase.firestore().collection("development"),
             ux: firebase.firestore().collection("ux"),
             animation: firebase.firestore().collection("animation"),
-            art: firebase.firestore().collection("art")
+            art: firebase.firestore().collection("art"),
+            gd: firebase.firestore().collection("logo")
         }
     },
     data(){
@@ -306,7 +307,7 @@ new Vue({
 
             this.$refs.fullpage.api.setAllowScrolling(this.windowOpen);
 
-            
+
         },
         handleSubmit() {
             this.emailSent = true;
