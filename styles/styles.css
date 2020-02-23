@@ -930,6 +930,8 @@ button:hover {
 }
 
 .grid-div .art-piece {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
   background-size: 115%;
   background-repeat: no-repeat;
   background-position: center;
@@ -942,8 +944,8 @@ button:hover {
 
 .grid-div .art-piece:hover {
   background-size: 140%;
-  -webkit-filter: brightness(0.7);
-          filter: brightness(0.7);
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 
 .bio-content {

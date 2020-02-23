@@ -751,6 +751,7 @@ button {
         cursor: zoom-in;
 
         .art-piece {
+            filter: brightness(0.8);
             background-size:115%;
             background-repeat: no-repeat;
             background-position: center;
@@ -761,7 +762,7 @@ button {
 
             &:hover {
                 background-size: 140%;
-                filter: brightness(0.7);
+                filter: brightness(1);
             }
         }
     }
