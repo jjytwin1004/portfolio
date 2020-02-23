@@ -52,6 +52,51 @@ body {
     transition: filter 350ms;
 }
 
+#fullpage .section {
+    .fp-slidesNav {
+        //opacity: 0 !important;
+        transition: 3s ease;
+    }
+    
+    
+    .fp-controlArrow {
+        //opacity: 0 !important;
+        transition: 3s ease;
+    }
+}
+
+.control-enter {
+
+
+    .fp-slidesNav {
+        opacity: 1 !important;
+    }
+    
+    
+    .fp-controlArrow {
+        opacity: 1 !important;
+    }
+    
+}
+
+.control-stage {
+
+    .fp-slidesNav {
+        opacity: 0 !important;
+        transform: scale(0.4);
+        transition: 150ms !important;
+    }
+    
+    
+    .fp-controlArrow {
+        opacity: 0 !important;
+        margin-left: 64px;
+        margin-right: 64px;
+        transition: 150ms !important;
+    }
+    
+}
+
 //----------intro svg animation stuff---------
 
 $startHeight: 12px;
@@ -435,7 +480,7 @@ $stageDistance: 32px;
     align-items: center !important;
     justify-content: center !important;
     height: 100vh;
-    background: $colorMain;
+    background: $colorDark;
     //filter: contrast(0.7);
 
     //background-image: url('../res/wave3.png');
@@ -541,23 +586,23 @@ button {
 }
 
 .section-development {
-    background: $colorMain;
+    background: $colorDark;
 }
 
 .section-animation {
     background: $colorDark;
 }
 
-.section-gd {
-    background: $colorMain;
-}
-
-.section-photo {
+.section-art {
     background: $colorDark;
 }
 
-.section-art {
-    background: $colorMain;
+.section-gd {
+    background:$colorDark;
+}
+
+.section-photo {
+    background:$colorDark;
 }
 
 //----------ux projects----------

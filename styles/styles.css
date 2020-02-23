@@ -50,6 +50,40 @@ body h1 {
   transition: filter 350ms, -webkit-filter 350ms;
 }
 
+#fullpage .section .fp-slidesNav {
+  -webkit-transition: 3s ease;
+  transition: 3s ease;
+}
+
+#fullpage .section .fp-controlArrow {
+  -webkit-transition: 3s ease;
+  transition: 3s ease;
+}
+
+.control-enter .fp-slidesNav {
+  opacity: 1 !important;
+}
+
+.control-enter .fp-controlArrow {
+  opacity: 1 !important;
+}
+
+.control-stage .fp-slidesNav {
+  opacity: 0 !important;
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+  -webkit-transition: 150ms !important;
+  transition: 150ms !important;
+}
+
+.control-stage .fp-controlArrow {
+  opacity: 0 !important;
+  margin-left: 64px;
+  margin-right: 64px;
+  -webkit-transition: 150ms !important;
+  transition: 150ms !important;
+}
+
 #logo path:nth-child(1) {
   opacity: 0;
   -webkit-transform: translateY(12px);
@@ -508,7 +542,7 @@ body h1 {
       -ms-flex-pack: center !important;
           justify-content: center !important;
   height: 100vh;
-  background: #212225;
+  background: #131417;
   background-position: center;
   background-size: 140%;
   background-repeat: no-repeat;
@@ -629,23 +663,23 @@ button:hover {
 }
 
 .section-development {
-  background: #212225;
+  background: #131417;
 }
 
 .section-animation {
   background: #131417;
 }
 
+.section-art {
+  background: #131417;
+}
+
 .section-gd {
-  background: #212225;
+  background: #131417;
 }
 
 .section-photo {
   background: #131417;
-}
-
-.section-art {
-  background: #212225;
 }
 
 .ux-container, .development-container {
