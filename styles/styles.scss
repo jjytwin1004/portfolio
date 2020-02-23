@@ -56,45 +56,41 @@ body {
     .fp-slidesNav {
         //opacity: 0 !important;
         transition: 3s ease;
+        transition: filter 200ms;
     }
     
     
     .fp-controlArrow {
         //opacity: 0 !important;
         transition: 3s ease;
+        transition: filter 200ms;
     }
 }
 
 .control-enter {
-
-
     .fp-slidesNav {
         opacity: 1 !important;
-    }
-    
-    
+    }    
     .fp-controlArrow {
         opacity: 1 !important;
+        &:hover {
+            filter: brightness(0.4);
+        }
     }
-    
 }
 
 .control-stage {
-
     .fp-slidesNav {
         opacity: 0 !important;
         transform: scale(0.4);
         transition: 150ms !important;
     }
-    
-    
     .fp-controlArrow {
         opacity: 0 !important;
         margin-left: 64px;
         margin-right: 64px;
         transition: 150ms !important;
     }
-    
 }
 
 //----------intro svg animation stuff---------
@@ -786,7 +782,7 @@ button {
 .animation-info {
     text-align: center;
     margin-top: 0px;
-    transform: translateY(64px);
+    transform: translateY(72px);
     font-size: 18px;
 }
 

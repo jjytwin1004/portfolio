@@ -53,11 +53,19 @@ body h1 {
 #fullpage .section .fp-slidesNav {
   -webkit-transition: 3s ease;
   transition: 3s ease;
+  -webkit-transition: -webkit-filter 200ms;
+  transition: -webkit-filter 200ms;
+  transition: filter 200ms;
+  transition: filter 200ms, -webkit-filter 200ms;
 }
 
 #fullpage .section .fp-controlArrow {
   -webkit-transition: 3s ease;
   transition: 3s ease;
+  -webkit-transition: -webkit-filter 200ms;
+  transition: -webkit-filter 200ms;
+  transition: filter 200ms;
+  transition: filter 200ms, -webkit-filter 200ms;
 }
 
 .control-enter .fp-slidesNav {
@@ -66,6 +74,11 @@ body h1 {
 
 .control-enter .fp-controlArrow {
   opacity: 1 !important;
+}
+
+.control-enter .fp-controlArrow:hover {
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
 }
 
 .control-stage .fp-slidesNav {
@@ -849,8 +862,8 @@ button:hover {
 .animation-info {
   text-align: center;
   margin-top: 0px;
-  -webkit-transform: translateY(64px);
-          transform: translateY(64px);
+  -webkit-transform: translateY(72px);
+          transform: translateY(72px);
   font-size: 18px;
 }
 
