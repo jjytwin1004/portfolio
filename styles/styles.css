@@ -32,6 +32,24 @@ body h1 {
   opacity: 0;
 }
 
+.blur-active {
+  -webkit-filter: blur(24px) brightness(0.24);
+          filter: blur(24px) brightness(0.24);
+  -webkit-transition: -webkit-filter 350ms;
+  transition: -webkit-filter 350ms;
+  transition: filter 350ms;
+  transition: filter 350ms, -webkit-filter 350ms;
+}
+
+.blur-inactive {
+  -webkit-filter: blur(0px) brightness(1);
+          filter: blur(0px) brightness(1);
+  -webkit-transition: -webkit-filter 350ms;
+  transition: -webkit-filter 350ms;
+  transition: filter 350ms;
+  transition: filter 350ms, -webkit-filter 350ms;
+}
+
 #logo path:nth-child(1) {
   opacity: 0;
   -webkit-transform: translateY(12px);
@@ -420,6 +438,52 @@ body h1 {
   opacity: 1 !important;
 }
 
+.contentVeil {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 8888;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.window-active {
+  opacity: 1;
+  pointer-events: all;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
+.window-inactive {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.window-content {
+  border-radius: 12px;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+}
+
+.window-content-active {
+  background: gray;
+  height: 80%;
+}
+
+.window-content-inactive {
+  background: gray;
+  height: 70%;
+}
+
 .center-text {
   text-align: center;
 }
@@ -503,8 +567,10 @@ body h1 {
 }
 
 .title-container .hero-title {
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 1s, -webkit-filter 350ms;
+  transition: 1s, -webkit-filter 350ms;
+  transition: filter 350ms, 1s;
+  transition: filter 350ms, 1s, -webkit-filter 350ms;
 }
 
 .title-container-nav {
@@ -518,13 +584,17 @@ body h1 {
   top: 22px;
   text-align: center;
   z-index: 2999;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: 1s ease, -webkit-filter 350ms;
+  transition: 1s ease, -webkit-filter 350ms;
+  transition: filter 350ms, 1s ease;
+  transition: filter 350ms, 1s ease, -webkit-filter 350ms;
 }
 
 .title-container-nav .hero-title {
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 1s, -webkit-filter 350ms;
+  transition: 1s, -webkit-filter 350ms;
+  transition: filter 350ms, 1s;
+  transition: filter 350ms, 1s, -webkit-filter 350ms;
   -webkit-transform: scale(0.42) !important;
           transform: scale(0.42) !important;
 }
@@ -619,8 +689,8 @@ button:hover {
 .ux-container .thumb-container:hover .thumbnail, .development-container .thumb-container:hover .thumbnail {
   -webkit-filter: blur(12px) brightness(0.35);
           filter: blur(12px) brightness(0.35);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
   -webkit-transition: 500ms;
   transition: 500ms;
 }
@@ -857,14 +927,23 @@ button:hover {
   border-radius: 12px;
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
+}
+
+.grid-div .art-piece {
   background-size: 115%;
   background-repeat: no-repeat;
   background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  -webkit-transition: 350ms;
+  transition: 350ms;
 }
 
-.grid-div:hover {
+.grid-div .art-piece:hover {
   background-size: 140%;
-  opacity: 0.6;
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
 }
 
 .bio-content {
@@ -918,11 +997,12 @@ a {
 
 .icon-insta {
   background-image: url("../res/icons/insta.png");
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
 }
 
 .portrait-img {
+  background: gray;
   background: gray;
   width: 150px;
   height: 150px;

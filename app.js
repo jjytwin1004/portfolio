@@ -28,18 +28,9 @@ new Vue({
     },
     data(){
         return {
-            emailSent: false,
-            message: {
-                from_name: '',
-                user_email: '',
-                subject_html: '',
-                message_html: ''
-            },
             currentTab: 1,
-            viewing: "",
-            viewOpen: false,
-            infoActive: false,
-            infoAmount: 'More info',
+            windowContent: "",
+            windowOpen: false,
             enter: false,
             exit: false,
             displayLoader: true,
@@ -307,33 +298,15 @@ new Vue({
 
             console.log("forced update");
         },
-        toggleInfo() {
-            if(this.infoActive) {
-                this.infoActive = false
-                this.infoAmount = 'More info'
-            }
-            else {
-                this.infoActive = true
-                this.infoAmount = 'Less info'
-            }
-            //console.log("info active: " + this.infoActive);
-        },
-        toggleWatch() {
-            this.watch = !this.watch;
-            //console.log('watch?: ' + this.watch);
-            if(this.watch) {
-                this.vidTime = 0;
-                this.options.navigation = false;
-            }
-            else {
-                this.vidTime = 85;
-                this.options.navigation = true;
-            }  
-            //console.log(this.options);
-        },
-        toggleView(e) {
-            this.viewing = e.target.src;
-            this.viewOpen = !this.viewOpen;
+        toggleWindow(e) {
+            //getting image url from background src
+            this.windowContent = e.target.style.backgroundImage.substring(5,e.target.style.backgroundImage.length - 2);
+            this.windowOpen = !this.windowOpen;
+            console.log(this.windowContent);
+
+            this.$refs.fullpage.api.setAllowScrolling(this.windowOpen);
+
+            
         },
         handleSubmit() {
             this.emailSent = true;
