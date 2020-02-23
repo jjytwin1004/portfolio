@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>Home</title>
+        <title>Hailey Jiyoun Jun</title>
         <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
 
-        <link rel="icon" type="image/svg" href="res/videocam-24px.svg">
+        <link rel="icon" type="image/svg" href="res/logo-white.svg">
 
         <link rel="stylesheet" href="styles/styles.css">
 
@@ -81,94 +81,124 @@
                             <!--div class="title-container-boring"><h1 class="hero-title">Hailey Jiyoun Jun</h1></div-->
                             <p style="margin-bottom: 18px; padding-top: 0px;" v-bind:class="(enter ? 'enter delay-2' : 'stage-below')">UX Designer</p>
                             <div class="hero-buttons">
-                                <button class="next" @click="$refs.fullpage.api.moveSectionDown()" v-bind:class="(enter ? 'enter delay-4' : 'stage-below')">View Work<!--div class="arrow"></div--></button>
+                                <button class="next" @click="$refs.fullpage.api.moveSectionDown()" v-bind:class="(enter ? 'enter delay-3' : 'stage-below')">View Work<!--div class="arrow"></div--></button>
                             </div>
                         </div>
                     </div>
+
+                    <!-- UX Section -->
+
                     <div class="section section-ux">
 
                         <div v-for="(i, index) in ux" class="slide project-slide">
                             <div class="ux-container project-container">
 
-                                    <div class="ux-left" v-bind:class="( enter ? 'enter delay-2' : 'stage-left' )">
-                                        <div class="thumb-container">
-                                            <div class="thumb-inner">
-                                                <div class="ux-thumbnail" v-bind:style="{ backgroundImage: 'url(' + ux[index].imageSrc + ')' }"></div>
-                                                <h2 v-bind:class="( enter ? 'enter delay-4' : 'stage-left')">{{ ux[index].title }}
-                                                        <br><a :href="ux[index].caseStudyLink" ><button class="next project-button" v-bind:class="( enter ? 'enter delay-8' : 'stage-left' )">View Case Study</button></a>
-                                                </h2>
+                                    <div class="ux-left" v-bind:class="( enter ? 'enter' : 'stage-left' )">
+                                        <a :href="i.caseStudyLink" >
+                                            <div class="thumb-container">
+                                                <div class="thumb-inner">
+                                                    <div class="ux-thumbnail thumbnail" v-bind:style="{ backgroundImage: 'url(' + i.imageSrc + ')' }"></div>
+                                                    <h2 v-bind:class="( enter ? 'enter delay-2' : 'stage-left')">
+                                                            <span>{{ i.title }}</span>
+                                                            <br>
+                                                            <button class="next project-button" v-bind:class="( enter ? 'enter delay-2' : 'stage-left' )">View Case Study</button>
+                                                    </h2>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </div>
                                     <div class="ux-right">
 
-                                        <div class="summary-container" v-bind:class="( enter ? 'enter delay-6' : 'stage-right' )">
-                                            <div class="ux-summary project-text">{{ ux[index].summary }}</div>
+                                        <div class="summary-container" v-bind:class="( enter ? 'enter delay-4' : 'stage-right' )">
+                                            <div class="ux-summary project-text">{{ i.summary }}</div>
                                         </div>
                                     </div>
 
                             </div>
                         </div>    
                         
-                        <div class="slide" style="display: none"></div>
+                        <!--div class="slide" style="display: none"></div-->
                         
                         <!--div class="bottom-bar bb1">
                             <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Development</div>
                         </div-->
 
                     </div>
+
+                    <!-- DEELOPMENT SECTION -->
+
                     <div class="section section-development">
-                        <div v-for="(i, index) in ux" class="slide project-slide">
-                                <div class="ux-container project-container">
-    
-                                        <div class="ux-left" v-bind:class="( enter ? 'enter delay-2' : 'stage-left' )">
+                        <div v-for="(i, index) in development" class="slide project-slide">
+                            <div class="development-container project-container">
+
+                                    <div class="dev-left" v-bind:class="( enter ? 'enter' : 'stage-left' )">
+                                        <a :href="i.caseStudyLink" >
                                             <div class="thumb-container">
                                                 <div class="thumb-inner">
-                                                        <div class="ux-thumbnail" v-bind:style="{ backgroundImage: 'url(' + development[index].imageSrc + ')' }"></div>
-                                                        <h2 v-bind:class="( enter ? 'enter delay-4' : 'stage-left')">{{ development[index].title }}</h2>
+                                                    <div class="development-thumbnail thumbnail" v-bind:style="{ backgroundImage: 'url(' + i.imageSrc + ')' }"></div>
+                                                    <h2 v-bind:class="( enter ? 'enter delay-2' : 'stage-left')">
+                                                            <span>{{ i.title }}</span>
+                                                            <br>
+                                                            <button class="next project-button" v-bind:class="( enter ? 'enter delay-2' : 'stage-left' )">Open Project</button>
+                                                    </h2>
                                                 </div>
                                             </div>
+                                        </a>
+                                    </div>
+                                    <div class="ux-right">
+
+                                        <div class="summary-container" v-bind:class="( enter ? 'enter delay-4' : 'stage-right' )">
+                                            <div class="development-summary project-text">{{ i.summary }}</div>
                                         </div>
-                                        <div class="ux-right">
-    
-                                            <div class="summary-container" v-bind:class="( enter ? 'enter delay-6' : 'stage-right' )">
-                                                <div class="ux-summary project-text">{{ development[index].summary }}</div>
-                                            </div>
-                                            <a :href="ux[index].caseStudyLink" ><button class="next project-button" v-bind:class="( enter ? 'enter delay-8' : 'stage-right' )">View Case Study</button></a>
-                                        </div>
-    
-                                </div>
-                            </div>    
-                        <div class="slide" style="display: none"></div>
+                                    </div>
+
+                            </div>
+                        </div>    
+                        <!--div class="slide" style="display: none"></div-->
                     </div>
+
+                    <!-- ANIMATION SECTION -->
+
                     <div class="section section-animation">
 
+                        <div v-for="(i, index) in animation" class="slide project-slide">
+                            <div class="animation-container">
+                                <div class="video-container" v-bind:class="( enter ? 'enter' : 'stage-below' )">
+                                    <video loop controls autoplay muted width="auto" height="550">
+                                        <source :src="i.videoSrc" type="video/mp4" />
+                                    </video>
+                                </div>
+                            </div>
+                            <p class="animation-info"><strong v-bind:class="( enter ? 'enter delay-4' : 'stage-below' )">{{ i.title }}<span style="opacity:0.6">&emsp;•&emsp;</span></strong>
+                                <span v-bind:class="( enter ? 'enter delay-6' : 'stage-below' )">{{ i.dateCompleted }}<span style="opacity:0.6">&emsp;•&emsp;</span></span>
+                                <span v-bind:class="( enter ? 'enter delay-8' : 'stage-below' )">{{ i.medium }}</span>
+                            </p>
+                        </div>
 
                     </div>
                     <div class="section section-logo">
 
                     </div>
                     <div class="section section-photo">
-
-
-
+ 
                     </div>
                     <div class="section section-art">
-
-
+                        <div class="parent">
+                            <div v-for="(i, index) in art" class="grid-div" v-bind:id="'art' + index" v-bind:class="( enter ? ('enter delay-' + index) : 'stage-grow' )" v-bind:style="{ backgroundImage: 'url( ' + i.src + ')' }"></div>
+                        </div>
                     </div>
                     <div class="section section-contact">
                         <div class="contact-section section-left">
-                            <div class="bio-content">
-                                <div class="portrait-img" v-bind:style="{ backgroundImage: 'url(' + userBio.photo + ')' }"></div>
+                            <div class="bio-content" v-bind:class="( enter ? 'enter' : 'stage-left' )">
+                                <div class="portrait-img" v-bind:style="{ backgroundImage: 'url(' + userBio.photo + ')' }" v-bind:class="( enter ? 'enter delay-2' : 'stage-grow' )"></div>
                                 <h1>Hailey Jiyoun Jun</h1>
                                 <p class="genre">UX Designer</p>
                                 <p class="summary bio">{{ userBio.text }}</p>
                             </div>
                             <form class="contact-form">
-                                <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jjytwin1004@gmail.com" target="_blank"><h4 v-bind:class="(enter ? 'enter' : 'stage-left')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-email"></div>jjytwin1004@gmail.com</h4></a><br>
-                                <a href="https://www.instagram.com/duxadepauluniversity/" target="_blank"><h4 v-bind:class="(enter ? 'enter delay-2' : 'stage-left')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-insta"></div>@jjytwin1004</h4></a>
-                                <a href="resume/resume.pdf" target="_blank"><h4  v-bind:class="(enter ? 'enter delay-4' : 'stage-left')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-cv"></div>Resume</h4></a>
+                                <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jjytwin1004@gmail.com" target="_blank"><h4 v-bind:class="(enter ? 'enter delay-4' : 'stage-left')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-email"></div>jjytwin1004@gmail.com</h4></a><br>
+                                <a href="https://www.instagram.com/duxadepauluniversity/" target="_blank"><h4 v-bind:class="(enter ? 'enter delay-6' : 'stage-left')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-insta"></div>@jjytwin1004</h4></a>
+                                <a href="resume/resume.pdf" target="_blank"><h4  v-bind:class="(enter ? 'enter delay-8' : 'stage-left')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-cv"></div>Resume</h4></a>
                             </form>
                         </div>
                         <div class="foot"><p>copyright © 2019 - Jiyoun Jun</p></div>

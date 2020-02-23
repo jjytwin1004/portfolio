@@ -22,6 +22,8 @@ new Vue({
             bio: firebase.firestore().collection("bio"),
             development: firebase.firestore().collection("development"),
             ux: firebase.firestore().collection("ux"),
+            animation: firebase.firestore().collection("animation"),
+            art: firebase.firestore().collection("art")
         }
     },
     data(){

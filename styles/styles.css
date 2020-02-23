@@ -214,11 +214,27 @@ body h1 {
   transition: opacity 700ms ease, transform 700ms ease, -webkit-transform 700ms ease;
 }
 
+.stage {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 150ms;
+  transition: 150ms;
+}
+
+.stage-grow {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 150ms;
+  transition: 150ms;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .stage-below {
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: 200ms;
-  transition: 200ms;
+  -webkit-transition: 150ms;
+  transition: 150ms;
   -webkit-transform: translateY(32px);
           transform: translateY(32px);
 }
@@ -226,8 +242,8 @@ body h1 {
 .stage-above {
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: 200ms;
-  transition: 200ms;
+  -webkit-transition: 150ms;
+  transition: 150ms;
   -webkit-transform: translateY(-32px);
           transform: translateY(-32px);
 }
@@ -235,8 +251,8 @@ body h1 {
 .stage-right {
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: 200ms;
-  transition: 200ms;
+  -webkit-transition: 150ms;
+  transition: 150ms;
   -webkit-transform: translateX(32px);
           transform: translateX(32px);
 }
@@ -244,8 +260,8 @@ body h1 {
 .stage-left {
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: 200ms;
-  transition: 200ms;
+  -webkit-transition: 150ms;
+  transition: 150ms;
   -webkit-transform: translateX(-32px);
           transform: translateX(-32px);
 }
@@ -312,6 +328,21 @@ body h1 {
 .delay-12 {
   -webkit-transition-delay: 1200ms;
           transition-delay: 1200ms;
+}
+
+.delay-13 {
+  -webkit-transition-delay: 1300ms;
+          transition-delay: 1300ms;
+}
+
+.delay-14 {
+  -webkit-transition-delay: 1400ms;
+          transition-delay: 1400ms;
+}
+
+.delay-15 {
+  -webkit-transition-delay: 1500ms;
+          transition-delay: 1500ms;
 }
 
 .navbar {
@@ -413,8 +444,7 @@ body h1 {
       -ms-flex-pack: center !important;
           justify-content: center !important;
   height: 100vh;
-  background: gray;
-  background-image: url("../res/wave3.png");
+  background: #212225;
   background-position: center;
   background-size: 140%;
   background-repeat: no-repeat;
@@ -548,7 +578,7 @@ button:hover {
   background: #212225;
 }
 
-.ux-container {
+.ux-container, .development-container {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -562,32 +592,50 @@ button:hover {
   transition: 300ms;
 }
 
-.ux-container .ux-left {
+.ux-container .ux-left, .ux-container .dev-left, .development-container .ux-left, .development-container .dev-left {
   margin-right: 48px;
   width: 180%;
 }
 
-.ux-container .thumb-inner {
+.ux-container .thumb-inner, .development-container .thumb-inner {
   width: 600px;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 
-.ux-container .thumb-inner h2 {
+.ux-container .thumb-inner h2, .development-container .thumb-inner h2 {
   text-align: center;
   position: absolute;
   margin: auto;
   font-size: 36px;
   width: inherit;
-  margin-top: -224px;
+  margin-top: -212px;
 }
 
-.ux-container .ux-thumbnail {
+.ux-container .thumb-container, .development-container .thumb-container {
+  cursor: pointer;
+}
+
+.ux-container .thumb-container:hover .thumbnail, .development-container .thumb-container:hover .thumbnail {
+  -webkit-filter: blur(12px) brightness(0.35);
+          filter: blur(12px) brightness(0.35);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.ux-container .thumb-container:hover .next, .development-container .thumb-container:hover .next {
+  background: white;
+  color: black;
+}
+
+.ux-container .thumbnail, .development-container .thumbnail {
   -webkit-filter: blur(0px) brightness(0.35);
           filter: blur(0px) brightness(0.35);
   border-radius: 12px;
-  height: 350px;
-  background-size: 100%;
+  height: 300px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -597,16 +645,9 @@ button:hover {
   transition: 500ms;
 }
 
-.ux-container .ux-thumbnail:hover {
-  -webkit-filter: blur(12px) brightness(0.35);
-          filter: blur(12px) brightness(0.35);
-  background-size: 120%;
-  -webkit-transition: 500ms;
-  transition: 500ms;
-}
-
-.ux-container .project-text {
+.ux-container .project-text, .development-container .project-text {
   opacity: 0.6;
+  line-height: 1.5;
 }
 
 .subtitle {
@@ -653,6 +694,179 @@ button:hover {
           align-items: center;
 }
 
+.animation-info {
+  text-align: center;
+  margin-top: 0px;
+  -webkit-transform: translateY(64px);
+          transform: translateY(64px);
+  font-size: 18px;
+}
+
+.animation-container .video-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.animation-container .video-container video {
+  border-radius: 12px;
+}
+
+.parent {
+  display: -ms-grid;
+  display: grid;
+  height: 70%;
+  width: 80%;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  grid-gap: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 48px;
+}
+
+#art0 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+#art1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+#art2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+#art3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: -1;
+  grid-area: 3 / 2 / 3 / 1;
+}
+
+#art4 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: -2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 5 / 2 / 3 / 3;
+}
+
+#art5 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 4 / 1 / 5 / 2;
+}
+
+#art6 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 3 / 4 / 4;
+}
+
+#art7 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 4 / 3 / 5;
+}
+
+#art8 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 4 / 4 / 5;
+}
+
+#art9 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 5 / 4 / 6;
+}
+
+#art10 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 5 / 3 / 6;
+}
+
+#art11 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-area: 4 / 5 / 5 / 7;
+}
+
+#art12 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: 4 / 3 / 5 / 5;
+}
+
+#art13 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 5 / 2 / 7;
+}
+
+#art14 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 6 / 4 / 7;
+}
+
+.grid-div {
+  background: gray;
+  border-radius: 12px;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  background-size: 115%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.grid-div:hover {
+  background-size: 140%;
+  opacity: 0.6;
+}
+
 .bio-content {
   display: block;
   width: 36%;
@@ -667,8 +881,8 @@ button:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 h4 {
@@ -723,6 +937,7 @@ a {
   font-size: 18px;
   font-weight: normal;
   width: 75%;
+  line-height: 1.5;
 }
 
 .contact-form {
@@ -761,7 +976,6 @@ a {
 
 .foot {
   position: absolute;
-  background: #212225;
   width: 100%;
   bottom: 0px;
   text-align: center;
@@ -800,6 +1014,8 @@ a {
   }
   .contact-form {
     padding: 12px 24px 12px 24px;
+    -webkit-transition: 200ms;
+    transition: 200ms;
   }
   .contact-form h4 {
     font-size: 14px !important;

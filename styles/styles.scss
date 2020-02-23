@@ -177,13 +177,26 @@ $timing: ease;
 
 //----------animation stuff----------
 
-$stageSpeed: 200ms;
+$stageSpeed: 150ms;
 $enterSpeed: 700ms;
 $stageDistance: 32px;
 
 .enter {
     opacity: 1;
     transition: opacity $enterSpeed ease, transform $enterSpeed ease;
+}
+
+.stage {
+    opacity: 0;
+    pointer-events: none;
+    transition: $stageSpeed;
+}
+
+.stage-grow {
+    opacity: 0;
+    pointer-events: none;
+    transition: $stageSpeed;
+    transform: scale(0.9);
 }
 
 .stage-below {
@@ -264,6 +277,18 @@ $stageDistance: 32px;
 
 .delay-12 {
     transition-delay: 1200ms;
+}
+
+.delay-13 {
+    transition-delay: 1300ms;
+}
+
+.delay-14 {
+    transition-delay: 1400ms;
+}
+
+.delay-15 {
+    transition-delay: 1500ms;
 }
 
 //----------navbar----------
@@ -361,10 +386,10 @@ $stageDistance: 32px;
     align-items: center !important;
     justify-content: center !important;
     height: 100vh;
-    background: gray;
+    background: $colorMain;
     //filter: contrast(0.7);
 
-    background-image: url('../res/wave3.png');
+    //background-image: url('../res/wave3.png');
     background-position: center;
     background-size: 140%;
     background-repeat: no-repeat;
@@ -488,7 +513,7 @@ button {
 
 //----------ux projects----------
 
-.ux-container {
+.ux-container, .development-container {
     //position: absolute;
     //width: 80%;
     //height: 80%;
@@ -498,7 +523,7 @@ button {
     align-items: center;
     transition: 300ms;
 
-    .ux-left {
+    .ux-left, .dev-left {
         margin-right: 48px;
         width: 180%
     }
@@ -514,33 +539,44 @@ button {
             margin: auto;
             font-size: 36px;
             width: inherit;
-            margin-top: -224px;
+            margin-top: -212px;
         }
     }
 
-    .ux-thumbnail {
+    .thumb-container {
+        cursor: pointer;
+
+        &:hover {
+            .thumbnail {
+                filter:blur(12px) brightness(0.35);
+                transform: scale(0.95);
+                transition: 500ms;
+            }
+
+            .next {
+                background: white;
+                color: black;
+            }
+        }
+    }
+
+    .thumbnail {
         //background: rgba(255,255,255,0.05);
         filter: blur(0px) brightness(0.35);
         border-radius: 12px;
         //padding-top: 52.65%;
-        height: 350px;
-        background-size: 100%;
+        height: 300px;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         cursor: pointer;
         transition-delay: 0ms;
         transition: 500ms;
-
-        &:hover {
-            filter:blur(12px) brightness(0.35);
-            background-size: 120%;
-            transition: 500ms;
-        }
     }
 
     .project-text {
         opacity: 0.6;
-
+        line-height: 1.5;
     }
 
 
@@ -608,6 +644,72 @@ button {
     //background: $colorDark;
 }
 
+.animation-info {
+    text-align: center;
+    margin-top: 0px;
+    transform: translateY(64px);
+    font-size: 18px;
+}
+
+.animation-container {
+    //background: blue;
+
+    .video-container {
+        //background: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        video {
+            border-radius: 12px;
+        }
+    }
+}
+
+//---------- collage grid stuff ----------
+
+.parent {
+    display: grid;
+    height:70%;
+    width: 80%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 12px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 48px;
+    }
+    
+    #art0 { grid-area: 1 / 2 / 2 / 4; }
+    #art1 { grid-area: 1 / 1 / 3 / 2; }
+    #art2 { grid-area: 2 / 2 / 3 / 3; }
+    #art3 { grid-area: 3 / 2 / 3 / 1; }
+    #art4 { grid-area: 5 / 2 / 3 / 3; }
+    #art5 { grid-area: 4 / 1 / 5 / 2; }
+    #art6 { grid-area: 2 / 3 / 4 / 4; }
+    #art7 { grid-area: 1 / 4 / 3 / 5; }
+    #art8 { grid-area: 3 / 4 / 4 / 5; }
+    #art9 { grid-area: 3 / 5 / 4 / 6; }
+    #art10 { grid-area: 2 / 5 / 3 / 6; }
+    #art11 { grid-area: 4 / 5 / 5 / 7; }
+    #art12 { grid-area: 4 / 3 / 5 / 5; }
+    #art13 { grid-area: 1 / 5 / 2 / 7; }
+    #art14 { grid-area: 2 / 6 / 4 / 7; }
+
+    .grid-div {
+        background: gray;
+        border-radius: 12px;
+        cursor: zoom-in;
+        background-size:115%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &:hover {
+            background-size: 140%;
+            opacity:0.6;
+        }
+    }
+
 //---------- end of projects ----------
 
 .bio-content {
@@ -624,7 +726,7 @@ button {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transform: scale(0.8);
+    transform: scale(0.7);
 }
 
 h4 {
@@ -634,6 +736,7 @@ h4 {
     border-radius: 12px;
     font-size: 22px;
     font-weight: normal;
+    //transition: background 300ms;
 
     &:hover {
         background: $colorMain;
@@ -678,6 +781,7 @@ a {
     font-size: 18px;
     font-weight: normal;
     width: 75%;
+    line-height: 1.5;
 }
 
 .contact-form {
@@ -711,7 +815,7 @@ a {
 
 .foot {
     position: absolute;
-    background: $colorMain;
+    //background: $colorMain;
     width: 100%;
     //height: 42px;
     bottom: 0px;
@@ -756,6 +860,7 @@ a {
 
     .contact-form {
         padding: 12px 24px 12px 24px;
+        transition: 200ms;
 
         h4 {
             font-size: 14px !important;
