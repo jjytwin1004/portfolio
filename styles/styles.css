@@ -447,11 +447,12 @@ body h1 {
   font-weight: bold;
   opacity: 1;
   cursor: default !important;
-  font-size: 18px;
+  font-size: 24px;
+  OPACITY: 0.2;
 }
 
 .navbar .divide:hover {
-  opacity: 1 !important;
+  opacity: 0.2 !important;
 }
 
 .navbar .main-logo {
@@ -466,7 +467,8 @@ body h1 {
 }
 
 .nav-active {
-  border-bottom: 2px white solid;
+  border-bottom: 3px white solid;
+  font-weight: bold;
 }
 
 .nav-active:hover {

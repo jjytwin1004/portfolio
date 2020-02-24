@@ -389,10 +389,11 @@ $stageDistance: 32px;
         font-weight: bold;
         opacity: 1;
         cursor: default !important;
-        font-size: 18px;
+        font-size: 24px;
+        OPACITY: 0.2;
 
         &:hover {
-            opacity: 1 !important;
+            opacity: 0.2 !important;
         }
     }
 
@@ -410,7 +411,8 @@ $stageDistance: 32px;
 }
 
 .nav-active {
-    border-bottom: 2px white solid;
+    border-bottom: 3px white solid;
+    font-weight: bold;
 
     &:hover {
         opacity: 1 !important;
