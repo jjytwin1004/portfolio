@@ -52,13 +52,13 @@ body h1 {
 }
 
 #fullpage .section .fp-slidesNav {
-  -webkit-transition: 2s ease;
-  transition: 2s ease;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 #fullpage .section .fp-controlArrow {
-  -webkit-transition: 2s ease;
-  transition: 2s ease;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .control-enter .fp-slidesNav {
@@ -261,10 +261,10 @@ body h1 {
 
 .enter {
   opacity: 1;
-  -webkit-transition: opacity 700ms ease, -webkit-transform 700ms ease;
-  transition: opacity 700ms ease, -webkit-transform 700ms ease;
-  transition: opacity 700ms ease, transform 700ms ease;
-  transition: opacity 700ms ease, transform 700ms ease, -webkit-transform 700ms ease;
+  -webkit-transition: opacity 400ms ease, -webkit-transform 400ms ease;
+  transition: opacity 400ms ease, -webkit-transform 400ms ease;
+  transition: opacity 400ms ease, transform 400ms ease;
+  transition: opacity 400ms ease, transform 400ms ease, -webkit-transform 400ms ease;
 }
 
 .stage {
@@ -519,6 +519,8 @@ body h1 {
 .window-content-inactive {
   background: gray;
   height: 70%;
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
 }
 
 .center-text {
@@ -763,8 +765,6 @@ button:hover {
   cursor: pointer;
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
-  -webkit-transition: 350ms;
-  transition: 350ms;
 }
 
 .grid-piece-container .gd-piece {

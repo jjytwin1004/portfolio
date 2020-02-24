@@ -55,13 +55,13 @@ body {
 #fullpage .section {
     .fp-slidesNav {
         //opacity: 0 !important;
-        transition: 2s ease;
+        transition: 1s ease;
     }
     
     
     .fp-controlArrow {
         //opacity: 0 !important;
-        transition: 2s ease;
+        transition: 1s ease;
     }
 }
 
@@ -229,7 +229,7 @@ $timing: ease;
 //----------animation stuff----------
 
 $stageSpeed: 150ms;
-$enterSpeed: 700ms;
+$enterSpeed: 400ms;
 $stageDistance: 32px;
 
 .enter {
@@ -457,6 +457,7 @@ $stageDistance: 32px;
 .window-content-inactive {
     background: gray;
     height: 70%;
+    transition-delay: 100ms;
 }
 
 //----------content----------
@@ -702,7 +703,7 @@ button {
     border-radius: 12px;
     cursor: pointer;
     filter: brightness(0.8);
-    transition: 350ms;
+    //transition: 350ms;
 
     .gd-piece {
         background-size: 110%;

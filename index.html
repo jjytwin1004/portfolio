@@ -38,15 +38,16 @@
                     </ul>
                     <ul class="nav-options nav-right">
                         <li @click="navigate(1)" v-bind:class="[currentTab == 1 ? 'nav-active' : '']">Home</li>
-                        <li @click="navigate(7)" v-bind:class="[currentTab == 7 ? 'nav-active' : '']" class="contact-link">Contact</li>
+                        <li @click="navigate(8)" v-bind:class="[currentTab == 8 ? 'nav-active' : '']" class="contact-link">Contact</li>
 
                         <li class="divide">|</li>
 
-                        <li @click="navigate(2)" v-bind:class="[currentTab == 2 ? 'nav-active' : '']">Development</li>
-                        <li @click="navigate(3)" v-bind:class="[currentTab == 3 ? 'nav-active' : '']">Design</li>
-                        <li @click="navigate(4)" v-bind:class="[currentTab == 4 ? 'nav-active' : '']">Animation</li>
-                        <li @click="navigate(5)" v-bind:class="[currentTab == 5 ? 'nav-active' : '']">Photography</li>
-                        <li @click="navigate(6)" v-bind:class="[currentTab == 6 ? 'nav-active' : '']">Drawing</li>
+                        <li @click="navigate(2)" v-bind:class="[currentTab == 2 ? 'nav-active' : '']">Prototype</li>
+                        <li @click="navigate(3)" v-bind:class="[currentTab == 3 ? 'nav-active' : '']">Development</li>
+                        <li @click="navigate(4)" v-bind:class="[currentTab == 4 ? 'nav-active' : '']">Graphic Design</li>
+                        <li @click="navigate(5)" v-bind:class="[currentTab == 5 ? 'nav-active' : '']">Animation</li>
+                        <li @click="navigate(6)" v-bind:class="[currentTab == 6 ? 'nav-active' : '']">Photography</li>
+                        <li @click="navigate(7)" v-bind:class="[currentTab == 7 ? 'nav-active' : '']">Drawing</li>
                     </ul>
                 </div>
             </div>
@@ -89,6 +90,45 @@
                         </div>
                     </div>
 
+                    <!-- UX SECTION -->
+
+                    <div class="section section-ux">
+
+                        <div v-for="(i, index) in ux" class="slide project-slide">
+                            <div class="ux-container project-container">
+
+                                    <div class="ux-left" v-bind:class="( enter ? 'enter' : 'stage-grow' )">
+                                        <a :href="i.caseStudyLink" >
+                                            <div class="thumb-container">
+                                                <div class="thumb-inner">
+                                                    <div class="ux-thumbnail thumbnail" v-bind:style="{ backgroundImage: 'url(' + i.imageSrc + ')' }"></div>
+                                                    <h2 v-bind:class="( enter ? 'enter delay-2' : 'stage-below')">
+                                                            <span>{{ i.title }}</span>
+                                                            <br>
+                                                            <button class="next project-button" v-bind:class="( enter ? 'enter delay-2' : 'stage-below' )">View Case Study</button>
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="ux-right">
+
+                                        <div class="summary-container" v-bind:class="( enter ? 'enter delay-2' : 'stage-below' )">
+                                            <div class="ux-summary project-text">{{ i.summary }}</div>
+                                        </div>
+                                    </div>
+
+                            </div>
+                        </div> 
+                        
+                        <!--div class="slide" style="display: none"></div-->
+                        
+                        <!--div class="bottom-bar bb1">
+                            <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Development</div>
+                        </div-->
+
+                    </div>
+
                     <!-- DEELOPMENT SECTION -->
 
                     <div class="section section-development">
@@ -121,55 +161,16 @@
                         <!--div class="slide" style="display: none"></div-->
                     </div>
 
-                    <!-- UX SECTION -->
+                    <!-- GRAPHIC DESIGN SECTION -->
 
-                    <div class="section section-ux">
-
-                        <div v-for="(i, index) in ux" class="slide project-slide">
-                            <div class="ux-container project-container">
-
-                                    <div class="ux-left" v-bind:class="( enter ? 'enter' : 'stage-grow' )">
-                                        <a :href="i.caseStudyLink" >
-                                            <div class="thumb-container">
-                                                <div class="thumb-inner">
-                                                    <div class="ux-thumbnail thumbnail" v-bind:style="{ backgroundImage: 'url(' + i.imageSrc + ')' }"></div>
-                                                    <h2 v-bind:class="( enter ? 'enter delay-2' : 'stage-below')">
-                                                            <span>{{ i.title }}</span>
-                                                            <br>
-                                                            <button class="next project-button" v-bind:class="( enter ? 'enter delay-2' : 'stage-below' )">View Case Study</button>
-                                                    </h2>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="ux-right">
-
-                                        <div class="summary-container" v-bind:class="( enter ? 'enter delay-2' : 'stage-below' )">
-                                            <div class="ux-summary project-text">{{ i.summary }}</div>
-                                        </div>
-                                    </div>
-
-                            </div>
-                        </div> 
-                        
-                        <!-- GRAPHIC DESIGN SECTION -->
-
-                        <div class="slide section-gd">
-                            <div class="gd-container">
-                                <div class="gd-project">
-                                    <div v-for="(i, index) in gd" class="grid-piece-container" v-bind:id="'gd' + index" v-bind:class="( enter ? ('enter delay-' + (2 * index)) : 'stage-below' )">
-                                        <div @click="toggleWindow" class="gd-piece" v-bind:style="{ backgroundImage: 'url( ' + i.src + ')' }"></div>
-                                    </div>
+                    <div class="section section-gd">
+                        <div class="gd-container">
+                            <div class="gd-project">
+                                <div v-for="(i, index) in gd" class="grid-piece-container" v-bind:id="'gd' + index" v-bind:class="( enter ? ('enter delay-' + (index)) : 'stage-below' )">
+                                    <div @click="toggleWindow" class="gd-piece" v-bind:style="{ backgroundImage: 'url( ' + i.src + ')' }"></div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!--div class="slide" style="display: none"></div-->
-                        
-                        <!--div class="bottom-bar bb1">
-                            <div v-if="ux.length == 1" class="bottom-nav" @click="$refs.fullpage.api.moveSectionDown()">Development</div>
-                        </div-->
-
                     </div>
 
                     <!-- ANIMATION SECTION -->
