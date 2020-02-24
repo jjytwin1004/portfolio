@@ -479,10 +479,10 @@ $stageDistance: 32px;
     background: $colorDark;
     //filter: contrast(0.7);
 
-    //background-image: url('../res/wave3.png');
-    background-position: center;
-    background-size: 140%;
-    background-repeat: no-repeat;
+    //background-image: url('../res/gray-wave.png');
+    background-position: bottom;
+    background-size: cover;
+    //background-repeat: no-repeat;
 
     .hero-buttons {
         display: flex;
@@ -963,7 +963,7 @@ a {
     //height: 42px;
     bottom: 0px;
     text-align: center;
-    padding: 6px;
+    padding: 24px;
 
     .love {
         width: 18px;

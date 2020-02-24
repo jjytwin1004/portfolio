@@ -556,9 +556,8 @@ body h1 {
           justify-content: center !important;
   height: 100vh;
   background: #131417;
-  background-position: center;
-  background-size: 140%;
-  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
 }
 
 .hero-section .hero-buttons {
@@ -1155,7 +1154,7 @@ a {
   width: 100%;
   bottom: 0px;
   text-align: center;
-  padding: 6px;
+  padding: 24px;
 }
 
 .foot .love {
