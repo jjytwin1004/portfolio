@@ -24,7 +24,8 @@ new Vue({
             ux: firebase.firestore().collection("ux"),
             animation: firebase.firestore().collection("animation"),
             art: firebase.firestore().collection("art"),
-            gd: firebase.firestore().collection("logo")
+            gd: firebase.firestore().collection("logo"),
+            photo: firebase.firestore().collection("photo")
         }
     },
     data(){
@@ -83,7 +84,7 @@ new Vue({
             parentObj.setItems();
             parentObj.componentsReady();
             parentObj.removeLoader();
-        }, 2000);
+        }, 1500);
     },
     methods: {
         componentsReady() {

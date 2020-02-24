@@ -14,7 +14,7 @@ body {
     //font-family: 'Hind Siliguri', sans-serif;
     font-family: 'Nunito', sans-serif;
     //font-family: 'Noto Sans KR', ;
-    background: black;
+    background: linear-gradient($colorMain, black);
     color: white;
 
     p {
@@ -55,26 +55,27 @@ body {
 #fullpage .section {
     .fp-slidesNav {
         //opacity: 0 !important;
-        transition: 3s ease;
-        transition: filter 200ms;
+        transition: 2s ease;
     }
     
     
     .fp-controlArrow {
         //opacity: 0 !important;
-        transition: 3s ease;
-        transition: filter 200ms;
+        transition: 2s ease;
     }
 }
 
 .control-enter {
     .fp-slidesNav {
         opacity: 1 !important;
+        &:hover {
+            //filter: brightness(0.3);
+        }
     }    
     .fp-controlArrow {
         opacity: 1 !important;
         &:hover {
-            filter: brightness(0.4);
+            //filter: brightness(0.3);
         }
     }
 }
@@ -190,12 +191,12 @@ $timing: ease;
     z-index: 1999;
     top: 0px;
     color: black;
-    background: #101010;
+    background: black;
     width: 100%;
     margin: 0px !important;
     height: 100vh;
     padding: 0px !important;
-    transition: 1.2s;
+    transition: 3s;
     margin: 0px;
 
     pointer-events: none;
@@ -212,7 +213,7 @@ $timing: ease;
     margin: 0px !important;
     height: 100vh;
     padding: 0px !important;
-    transition: 1.2s;
+    transition: 3s;
     opacity: 0;
     pointer-events: none;
 
@@ -476,13 +477,13 @@ $stageDistance: 32px;
     align-items: center !important;
     justify-content: center !important;
     height: 100vh;
-    background: $colorDark;
+    //background: $colorDark;
     //filter: contrast(0.7);
 
-    //background-image: url('../res/gray-wave.png');
-    background-position: bottom;
-    background-size: cover;
-    //background-repeat: no-repeat;
+    //background-image: url('../res/wave3.png');
+    background-position: center;
+    background-size: 140%;
+    background-repeat: no-repeat;
 
     .hero-buttons {
         display: flex;
@@ -578,27 +579,27 @@ button {
 }
 
 .section-ux {
-    background: $colorDark;
+    //background: $colorDark;
 }
 
 .section-development {
-    background: $colorDark;
+    //background: $colorDark;
 }
 
 .section-animation {
-    background: $colorDark;
+    //background: $colorDark;
 }
 
 .section-art {
-    background: $colorDark;
+    //background: $colorDark;
 }
 
 .section-gd {
-    background:$colorDark;
+    //background:$colorDark;
 }
 
 .section-photo {
-    background:$colorDark;
+    //background:$colorDark;
 }
 
 //----------ux projects----------
@@ -688,7 +689,7 @@ button {
     //background: blue;
     display: flex;
     height: 50%;
-    width: 70%;
+    width: 60%;
 }
 
 .grid-piece-container {
@@ -698,6 +699,8 @@ button {
     margin:12px;
     border-radius: 12px;
     cursor: pointer;
+    filter: brightness(0.8);
+    transition: 350ms;
 
     .gd-piece {
         background-size: 110%;
@@ -710,10 +713,29 @@ button {
     }
 
     &:hover {
+        filter: brightness(1);
+
         .gd-piece {
             background-size: 130%;
-            filter: brightness(0.8);
         }
+    }
+}
+
+//----------photo projects----------
+
+.section-photo {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-container {
+    height: 70%;
+
+    h2 {
+        text-align: center;
     }
 }
 
@@ -796,6 +818,25 @@ button {
         align-items: center;
 
         video {
+            border-radius: 12px;
+        }
+    }
+}
+
+.photo-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+
+        img {
             border-radius: 12px;
         }
     }
@@ -939,7 +980,7 @@ a {
 
 
 .section-left {
-    background: $colorDark;
+    //background: $colorDark;
     width: 100%;
     height: 100vh;
     margin: 0px;
@@ -963,7 +1004,7 @@ a {
     //height: 42px;
     bottom: 0px;
     text-align: center;
-    padding: 24px;
+    padding: 36px;
 
     .love {
         width: 18px;

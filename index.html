@@ -38,16 +38,15 @@
                     </ul>
                     <ul class="nav-options nav-right">
                         <li @click="navigate(1)" v-bind:class="[currentTab == 1 ? 'nav-active' : '']">Home</li>
-                        <li @click="navigate(8)" v-bind:class="[currentTab == 8 ? 'nav-active' : '']" class="contact-link">Contact</li>
+                        <li @click="navigate(7)" v-bind:class="[currentTab == 7 ? 'nav-active' : '']" class="contact-link">Contact</li>
 
                         <li class="divide">|</li>
 
                         <li @click="navigate(2)" v-bind:class="[currentTab == 2 ? 'nav-active' : '']">Development</li>
-                        <li @click="navigate(3)" v-bind:class="[currentTab == 3 ? 'nav-active' : '']">UX</li>
+                        <li @click="navigate(3)" v-bind:class="[currentTab == 3 ? 'nav-active' : '']">Design</li>
                         <li @click="navigate(4)" v-bind:class="[currentTab == 4 ? 'nav-active' : '']">Animation</li>
-                        <li @click="navigate(5)" v-bind:class="[currentTab == 5 ? 'nav-active' : '']">Drawing</li>
-                        <li @click="navigate(6)" v-bind:class="[currentTab == 6 ? 'nav-active' : '']">Graphic Design</li>
-                        <li @click="navigate(7)" v-bind:class="[currentTab == 7 ? 'nav-active' : '']">Photography</li>
+                        <li @click="navigate(5)" v-bind:class="[currentTab == 5 ? 'nav-active' : '']">Photography</li>
+                        <li @click="navigate(6)" v-bind:class="[currentTab == 6 ? 'nav-active' : '']">Drawing</li>
                     </ul>
                 </div>
             </div>
@@ -79,7 +78,7 @@
             </div>
 
             <div v-bind:class="( windowOpen ? 'blur-active' : 'blur-inactive' )">
-                <full-page ref="fullpage" :options="options" id="fullpage" :skip-init="true" v-bind:class="( enter ? 'control-enter delay-12' : 'control-stage' )">
+                <full-page ref="fullpage" :options="options" id="fullpage" :skip-init="true" v-bind:class="( enter ? 'control-enter' : 'control-stage' )">
                     <div class="section hero-section">
                         <div class="hero-content">
                             <!--div class="title-container-boring"><h1 class="hero-title">Hailey Jiyoun Jun</h1></div-->
@@ -112,7 +111,7 @@
                                     </div>
                                     <div class="ux-right">
 
-                                        <div class="summary-container" v-bind:class="( enter ? 'enter delay-2' : 'stage-grow' )">
+                                        <div class="summary-container" v-bind:class="( enter ? 'enter delay-2' : 'stage-below' )">
                                             <div class="development-summary project-text">{{ i.summary }}</div>
                                         </div>
                                     </div>
@@ -145,13 +144,25 @@
                                     </div>
                                     <div class="ux-right">
 
-                                        <div class="summary-container" v-bind:class="( enter ? 'enter delay-2' : 'stage-grow' )">
+                                        <div class="summary-container" v-bind:class="( enter ? 'enter delay-2' : 'stage-below' )">
                                             <div class="ux-summary project-text">{{ i.summary }}</div>
                                         </div>
                                     </div>
 
                             </div>
-                        </div>    
+                        </div> 
+                        
+                        <!-- GRAPHIC DESIGN SECTION -->
+
+                        <div class="slide section-gd">
+                            <div class="gd-container">
+                                <div class="gd-project">
+                                    <div v-for="(i, index) in gd" class="grid-piece-container" v-bind:id="'gd' + index" v-bind:class="( enter ? ('enter delay-' + (2 * index)) : 'stage-below' )">
+                                        <div @click="toggleWindow" class="gd-piece" v-bind:style="{ backgroundImage: 'url( ' + i.src + ')' }"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
                         <!--div class="slide" style="display: none"></div-->
                         
@@ -180,6 +191,19 @@
                         </div>
                     </div>
 
+                    <!-- PHOTO SECTION -->
+
+                    <div class="section section-photo">
+
+                        <div v-for="(i, index) in photo" class="slide project-slide">
+                            <div class="photo-container">
+                                <div class="image-container" v-bind:class="( enter ? 'enter' : 'stage-grow' )">
+                                    <img :src="i.src" height="550" width="auto" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- ART SECTION  -->
 
                     <div class="section section-art">
@@ -189,23 +213,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- GRAPHIC DESIGN SECTION -->
-
-                    <div class="section section-gd">
-                        <div class="gd-container">
-                            <div class="gd-project">
-                                <div v-for="(i, index) in gd" class="grid-piece-container" v-bind:id="'gd' + index" v-bind:class="( enter ? ('enter delay-' + (2 * index)) : 'stage-below' )">
-                                    <div @click="toggleWindow" class="gd-piece" v-bind:style="{ backgroundImage: 'url( ' + i.src + ')' }"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section section-photo">
- 
-                    </div>
-
-
 
                     <!-- CONTACT -->
                     

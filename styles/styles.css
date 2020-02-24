@@ -1,7 +1,8 @@
 body {
   margin: 0px;
   font-family: 'Nunito', sans-serif;
-  background: black;
+  background: -webkit-gradient(linear, left top, left bottom, from(#212225), to(black));
+  background: linear-gradient(#212225, black);
   color: white;
 }
 
@@ -51,21 +52,13 @@ body h1 {
 }
 
 #fullpage .section .fp-slidesNav {
-  -webkit-transition: 3s ease;
-  transition: 3s ease;
-  -webkit-transition: -webkit-filter 200ms;
-  transition: -webkit-filter 200ms;
-  transition: filter 200ms;
-  transition: filter 200ms, -webkit-filter 200ms;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
 }
 
 #fullpage .section .fp-controlArrow {
-  -webkit-transition: 3s ease;
-  transition: 3s ease;
-  -webkit-transition: -webkit-filter 200ms;
-  transition: -webkit-filter 200ms;
-  transition: filter 200ms;
-  transition: filter 200ms, -webkit-filter 200ms;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
 }
 
 .control-enter .fp-slidesNav {
@@ -74,11 +67,6 @@ body h1 {
 
 .control-enter .fp-controlArrow {
   opacity: 1 !important;
-}
-
-.control-enter .fp-controlArrow:hover {
-  -webkit-filter: brightness(0.4);
-          filter: brightness(0.4);
 }
 
 .control-stage .fp-slidesNav {
@@ -238,13 +226,13 @@ body h1 {
   z-index: 1999;
   top: 0px;
   color: black;
-  background: #101010;
+  background: black;
   width: 100%;
   margin: 0px !important;
   height: 100vh;
   padding: 0px !important;
-  -webkit-transition: 1.2s;
-  transition: 1.2s;
+  -webkit-transition: 3s;
+  transition: 3s;
   margin: 0px;
   pointer-events: none;
 }
@@ -259,8 +247,8 @@ body h1 {
   margin: 0px !important;
   height: 100vh;
   padding: 0px !important;
-  -webkit-transition: 1.2s;
-  transition: 1.2s;
+  -webkit-transition: 3s;
+  transition: 3s;
   opacity: 0;
   pointer-events: none;
 }
@@ -555,9 +543,9 @@ body h1 {
       -ms-flex-pack: center !important;
           justify-content: center !important;
   height: 100vh;
-  background: #131417;
-  background-position: bottom;
-  background-size: cover;
+  background-position: center;
+  background-size: 140%;
+  background-repeat: no-repeat;
 }
 
 .hero-section .hero-buttons {
@@ -670,30 +658,6 @@ button:hover {
   font-size: 64px;
 }
 
-.section-ux {
-  background: #131417;
-}
-
-.section-development {
-  background: #131417;
-}
-
-.section-animation {
-  background: #131417;
-}
-
-.section-art {
-  background: #131417;
-}
-
-.section-gd {
-  background: #131417;
-}
-
-.section-photo {
-  background: #131417;
-}
-
 .ux-container, .development-container {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -785,7 +749,7 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   height: 50%;
-  width: 70%;
+  width: 60%;
 }
 
 .grid-piece-container {
@@ -795,6 +759,10 @@ button:hover {
   margin: 12px;
   border-radius: 12px;
   cursor: pointer;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+  -webkit-transition: 350ms;
+  transition: 350ms;
 }
 
 .grid-piece-container .gd-piece {
@@ -808,10 +776,35 @@ button:hover {
   transition: 350ms;
 }
 
+.grid-piece-container:hover {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
 .grid-piece-container:hover .gd-piece {
   background-size: 130%;
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
+}
+
+.section-photo {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.photo-container {
+  height: 70%;
+}
+
+.photo-container h2 {
+  text-align: center;
 }
 
 .subtitle {
@@ -879,6 +872,36 @@ button:hover {
 }
 
 .animation-container .video-container video {
+  border-radius: 12px;
+}
+
+.photo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 12px;
+}
+
+.photo-container .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 12px;
+}
+
+.photo-container .image-container img {
   border-radius: 12px;
 }
 
@@ -1127,7 +1150,6 @@ a {
 }
 
 .section-left {
-  background: #131417;
   width: 100%;
   height: 100vh;
   margin: 0px;
@@ -1154,7 +1176,7 @@ a {
   width: 100%;
   bottom: 0px;
   text-align: center;
-  padding: 24px;
+  padding: 36px;
 }
 
 .foot .love {
