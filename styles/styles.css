@@ -513,14 +513,18 @@ body h1 {
 
 .window-content-active {
   background: gray;
-  height: 80%;
+  max-height: 80%;
+  max-width: 80%;
+  -webkit-transition-delay: 50ms;
+          transition-delay: 50ms;
 }
 
 .window-content-inactive {
   background: gray;
-  height: 70%;
-  -webkit-transition-delay: 100ms;
-          transition-delay: 100ms;
+  max-height: 80%;
+  max-width: 80%;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
 }
 
 .center-text {
@@ -1041,6 +1045,86 @@ button:hover {
   grid-area: 2 / 6 / 4 / 7;
 }
 
+#photo0 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 2 / 1 / 4 / 3;
+}
+
+#photo1 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 4 / 1 / 5 / 3;
+}
+
+#photo2 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: 3 / 3 / 5 / 5;
+}
+
+#photo3 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 5 / 4 / 6;
+}
+
+#photo4 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-area: 4 / 5 / 5 / 6;
+}
+
+#photo5 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 1 / 1 / 2 / 4;
+}
+
+#photo6 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+#photo7 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-area: 4 / 6 / 5 / 7;
+}
+
+#photo8 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 6 / 4 / 7;
+}
+
+#photo9 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: 1 / 4 / 3 / 7;
+}
+
 .grid-div {
   background: gray;
   border-radius: 12px;
@@ -1062,6 +1146,25 @@ button:hover {
 }
 
 .grid-div .art-piece:hover {
+  background-size: 140%;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.grid-div .photo-piece {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+  background-size: 115%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+}
+
+.grid-div .photo-piece:hover {
   background-size: 140%;
   -webkit-filter: brightness(1);
           filter: brightness(1);

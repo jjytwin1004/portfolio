@@ -195,12 +195,9 @@
                     <!-- PHOTO SECTION -->
 
                     <div class="section section-photo">
-
-                        <div v-for="(i, index) in photo" class="slide project-slide">
-                            <div class="photo-container">
-                                <div class="image-container" v-bind:class="( enter ? 'enter' : 'stage-grow' )">
-                                    <img :src="i.src" height="550" width="auto" />
-                                </div>
+                        <div class="parent">
+                            <div v-for="(i, index) in photo" class="grid-div" v-bind:id="'photo' + index" v-bind:class="( enter ? ('enter delay-' + (index)) : 'stage-grow' )">
+                                <div @click="toggleWindow" class="photo-piece" v-bind:style="{ backgroundImage: 'url( ' + i.src + ')' }"></div>
                             </div>
                         </div>
                     </div>
