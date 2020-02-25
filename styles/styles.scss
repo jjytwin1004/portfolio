@@ -1281,7 +1281,7 @@ a {
     }
 
     .bio-content {
-        margin-left: 42px !important;
+        margin-left: 30px !important;
         padding-top: 48px !important;
         width: 100% !important;
     }
@@ -1295,11 +1295,16 @@ a {
     .contact-form {
         padding: 12px 24px 12px 24px;
         transition: 200ms;
+        display: flex;
 
         h4 {
             font-size: 14px !important;
-            padding: 12px;
+            padding: 12px 12px 12px 0px;
         }
+    }
+
+    .contact-icon {
+        margin: 0px 12px 0px 0px;
     }
 
     .section-left {
