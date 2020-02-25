@@ -1356,7 +1356,7 @@ a {
     left: 0px;
     right: 0px;
     top: 14px;
-    opacity: 0.6;
+    opacity: 0;
   }
   .title-container {
     -webkit-transform: scale(0.7);
@@ -1498,9 +1498,9 @@ a {
     width: 100%;
   }
   .project-container .thumb-inner h2 {
-    margin-top: -178px;
+    margin-top: -163px;
     width: 100vw;
-    font-size: 32px;
+    font-size: 22px;
   }
   .gd-project {
     -webkit-box-orient: vertical;
