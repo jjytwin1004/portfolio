@@ -1372,8 +1372,8 @@ a {
         grid-template-rows: repeat(5, 1fr);
     grid-gap: 12px;
     margin-top: 90px;
-    height: 83%;
-    width: 93%;
+    height: 75%;
+    width: 85%;
   }
   .grid-div {
     border-radius: 6px;
