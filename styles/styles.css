@@ -1403,8 +1403,7 @@ a {
     padding: 12px 0px 0px 24px !important;
   }
   .navbar .nav-inner .nav-right {
-    background: -webkit-gradient(linear, left top, left bottom, from(#212225), to(black));
-    background: linear-gradient(#212225, black);
+    background-color: #131417;
     height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;

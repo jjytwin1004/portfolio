@@ -1188,7 +1188,8 @@ a {
         .nav-inner .nav-right {
             //opacity: 0;
             //display:none;
-            background: linear-gradient($colorMain, black);
+            //background: linear-gradient($colorMain, black);
+            background-color: $colorDark;
             height: 100vh;
             display: flex;
             flex-direction: column;
