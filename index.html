@@ -83,6 +83,8 @@
                 </div>
             </div>
 
+            <h1 v-if="mobile" class="mobile-nav-ind">{{ sectionTitles[currentTab - 1] }}</h1>
+
             <div v-bind:class="( windowOpen ? 'blur-active' : 'blur-inactive' )">
                 <full-page ref="fullpage" :options="options" id="fullpage" :skip-init="true" v-bind:class="( enter ? 'control-enter' : 'control-stage' )">
                     <div class="section hero-section">

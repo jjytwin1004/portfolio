@@ -38,6 +38,7 @@ new Vue({
             displayLoader: true,
             menuActive: false,
             mobile: false,
+            sectionTitles:["Home","Prototypes","Development","Graphic Design","Animation","Photography","Drawing","Contact"],
             options: {
                 //parent: this,
                 afterLoad: this.handleLoad,
@@ -50,7 +51,7 @@ new Vue({
                 parallax: true,
                 lazyLoading: false,
                 scrollingSpeed: 800,
-                anchors:["home","ux","development","animation","graphicdesign","photography","art","contact"],
+                anchors:["home","ux","development","animation","graphicdesign","photography","art","contact"]
             },
             userBio: {
                 photo: "",
