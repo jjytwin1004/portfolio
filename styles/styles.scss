@@ -14,7 +14,8 @@ body {
     //font-family: 'Hind Siliguri', sans-serif;
     font-family: 'Nunito', sans-serif;
     //font-family: 'Noto Sans KR', ;
-    background: linear-gradient($colorMain, black);
+    //background: linear-gradient($colorMain, black);
+    background: $colorDark;
     color: white;
 
     p {
@@ -996,6 +997,11 @@ a {
     transform: scale(0.6);
 }
 
+.icon-linkedin {
+    background-image: url('../res/icons/linkedin.png');
+    transform: scale(0.6);
+}
+
 .portrait-img {
     background: gray;
     width: 150px;
@@ -1261,13 +1267,13 @@ a {
     .gd-project {
         flex-direction: column;
         width: 80%;
-        height: 76%;
-        margin-top: 0px;
+        height: 74%;
+        margin-top: 48px;
 
     }
 
     .grid-piece-container {
-        margin: 24px 0px 0px 0px;
+        margin: 0px 0px 24px 0px;
 
         .gd-piece {
             background-position: top;

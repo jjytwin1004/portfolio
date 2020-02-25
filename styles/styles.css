@@ -1,8 +1,7 @@
 body {
   margin: 0px;
   font-family: 'Nunito', sans-serif;
-  background: -webkit-gradient(linear, left top, left bottom, from(#212225), to(black));
-  background: linear-gradient(#212225, black);
+  background: #131417;
   color: white;
 }
 
@@ -1232,6 +1231,12 @@ a {
           transform: scale(0.6);
 }
 
+.icon-linkedin {
+  background-image: url("../res/icons/linkedin.png");
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
 .portrait-img {
   background: gray;
   width: 150px;
@@ -1474,11 +1479,11 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 80%;
-    height: 76%;
-    margin-top: 0px;
+    height: 74%;
+    margin-top: 48px;
   }
   .grid-piece-container {
-    margin: 24px 0px 0px 0px;
+    margin: 0px 0px 24px 0px;
   }
   .grid-piece-container .gd-piece {
     background-position: top;
