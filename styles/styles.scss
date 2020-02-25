@@ -229,7 +229,7 @@ $timing: ease;
 //----------animation stuff----------
 
 $stageSpeed: 150ms;
-$enterSpeed: 400ms;
+$enterSpeed: 500ms;
 $stageDistance: 32px;
 
 .enter {
@@ -461,6 +461,7 @@ $stageDistance: 32px;
     max-height: 80%;
     max-width: 80%;
     transform: scale(0.85);
+    transition-delay: 50ms;
 }
 
 //----------content----------

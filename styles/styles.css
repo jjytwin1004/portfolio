@@ -261,10 +261,10 @@ body h1 {
 
 .enter {
   opacity: 1;
-  -webkit-transition: opacity 400ms ease, -webkit-transform 400ms ease;
-  transition: opacity 400ms ease, -webkit-transform 400ms ease;
-  transition: opacity 400ms ease, transform 400ms ease;
-  transition: opacity 400ms ease, transform 400ms ease, -webkit-transform 400ms ease;
+  -webkit-transition: opacity 500ms ease, -webkit-transform 500ms ease;
+  transition: opacity 500ms ease, -webkit-transform 500ms ease;
+  transition: opacity 500ms ease, transform 500ms ease;
+  transition: opacity 500ms ease, transform 500ms ease, -webkit-transform 500ms ease;
 }
 
 .stage {
@@ -525,6 +525,8 @@ body h1 {
   max-width: 80%;
   -webkit-transform: scale(0.85);
           transform: scale(0.85);
+  -webkit-transition-delay: 50ms;
+          transition-delay: 50ms;
 }
 
 .center-text {

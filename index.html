@@ -98,7 +98,7 @@
                             <div class="ux-container project-container">
 
                                     <div class="ux-left" v-bind:class="( enter ? 'enter' : 'stage-grow' )">
-                                        <a :href="i.caseStudyLink" >
+                                        <a :href="i.caseStudyLink" target="_blank">
                                             <div class="thumb-container">
                                                 <div class="thumb-inner">
                                                     <div class="ux-thumbnail thumbnail" v-bind:style="{ backgroundImage: 'url(' + i.imageSrc + ')' }"></div>
@@ -216,19 +216,19 @@
                     
                     <div class="section section-contact">
                         <div class="contact-section section-left">
-                            <div class="bio-content" v-bind:class="( enter ? 'enter' : 'stage-left' )">
+                            <div class="bio-content" v-bind:class="( enter ? 'enter' : 'stage-below' )">
                                 <div class="portrait-img" v-bind:style="{ backgroundImage: 'url(' + userBio.photo + ')' }" v-bind:class="( enter ? 'enter' : 'stage-grow' )"></div>
                                 <h1>Hailey Jiyoun Jun</h1>
                                 <p class="genre">UX Designer</p>
                                 <p class="summary bio">{{ userBio.text }}</p>
                             </div>
                             <form class="contact-form">
-                                <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jjytwin1004@gmail.com" target="_blank"><h4 v-bind:class="(enter ? 'enter delay-4' : 'stage-below')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-email"></div>jjytwin1004@gmail.com</h4></a><br>
-                                <a href="https://www.instagram.com/duxadepauluniversity/" target="_blank"><h4 v-bind:class="(enter ? 'enter delay-6' : 'stage-below')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-insta"></div>@jjytwin1004</h4></a>
-                                <a href="resume/resume.pdf" target="_blank"><h4  v-bind:class="(enter ? 'enter delay-8' : 'stage-below')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-cv"></div>Resume</h4></a>
+                                <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jjytwin1004@gmail.com" target="_blank"><h4 v-bind:class="(enter ? 'enter delay-2' : 'stage-below')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-email"></div>jjytwin1004@gmail.com</h4></a><br>
+                                <a href="https://www.instagram.com/duxadepauluniversity/" target="_blank"><h4 v-bind:class="(enter ? 'enter delay-4' : 'stage-below')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-insta"></div>@jjytwin1004</h4></a>
+                                <a href="resume/resume.pdf" target="_blank"><h4  v-bind:class="(enter ? 'enter delay-6' : 'stage-below')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-cv"></div>Resume</h4></a>
                             </form>
                         </div>
-                        <div class="foot" v-bind:class="( enter ? 'enter' : 'stage-below' )"><p>copyright © 2019 - Jiyoun Jun</p></div>
+                        <div class="foot" v-bind:class="( enter ? 'enter delay-2' : 'stage' )"><p>copyright © 2019 - Jiyoun Jun</p></div>
                     </div>
                 </full-page>
             </div>
