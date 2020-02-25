@@ -344,6 +344,23 @@ $stageDistance: 32px;
 
 //----------navbar----------
 
+.main-logo {
+    //background: red;
+    background-image: url('../res/logo-white.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    transform: scale(0.7);
+    width: 40px;
+    height: 40px;
+    margin-right: 36px;
+    cursor: pointer;
+    z-index:9999;
+}
+
 .navbar {
     //background: red;
     display: inline-flex;
@@ -395,18 +412,6 @@ $stageDistance: 32px;
         &:hover {
             opacity: 0.2 !important;
         }
-    }
-
-    .main-logo {
-        //background: red;
-        background-image: url('../res/logo-white.svg');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 40px;
-        height: 40px;
-        margin-right: 36px;
-        cursor: pointer;
     }
 }
 
@@ -1068,6 +1073,10 @@ a {
     }
 }
 
+.menu {
+    display: none;
+}
+
 //---------- mobile ----------
 
 @media only screen and (max-width: 768px) {
@@ -1079,6 +1088,9 @@ a {
         margin: auto;
         left: 0px;
         right:0px;
+        top: 14px;
+        opacity: 0.6;
+
         //transition: 500ms;
     }
 
@@ -1098,31 +1110,91 @@ a {
         font-size: 14px;
     }
 
+    .menu {
+        right: 24px;
+        top: 12px;
+        position: absolute;
+        z-index: 9999;
+        display: block;
+        //transform: scaleX(-1);
+    }
+
+    .menu-button-inactive {
+        //background: blue;
+        //transform: scale(0.8);
+        padding-left: 12px;
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: invert(1);
+        background-image: url('../res/icons/menu-24px.svg');
+        //transition: 500ms;
+    }
+
+    .menu-button-active {
+        //background: blue;
+        //transform: scale(0.8);
+        padding-left: 12px;
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: invert(1);
+        background-image: url('../res/icons/close-24px.svg');
+        //transition: 500ms;
+    }
+
+    .navbar-inactive {
+        opacity: 0px;
+    }
+
+    @keyframes navEnter {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
     .navbar {
         padding-top: 0px;
-        z-index: 9999;
+        z-index: 7999;
+        //display: none;
+        transition: 300ms;
+        //animation: navEnter 500ms ease forwards;
 
         .main-logo {
             //background: blue;
             transform: scale(0.8);
             padding-left: 12px;
+            z-index:9999;
         }
 
+        .nav-left {
+            padding: 12px 0px 0px 24px !important;
+        }
 
         .nav-inner .nav-right {
             //opacity: 0;
             //display:none;
-            pointer-events: none;
-            background: $colorMain;
+            background: linear-gradient($colorMain, black);
             height: 100vh;
-            display: block;
+            display: flex;
+            flex-direction: column;
             width: 100%;
             padding: 0px;
             margin: 0px;
             text-align: center;
+            justify-content: center;
+            align-items: center;
         
             li {
-                margin: 0px;
+                margin: 0px 0px 12px 0px ;
+                font-size: 18px !important;
             }
 
             .divide {
@@ -1131,11 +1203,72 @@ a {
 
             .nav-active {
                 border: none;
+                opacity: 1 !important;
             }
 
             .nav-inactive {
-                opacity: 0.6;
+                opacity: 0.2;
             }
+
+            .home-link {
+                opacity: 0.4;
+            }
+
+            .contact-link {
+                opacity: 0.4;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .ux-container, .development-container {
+        display: block;
+        text-align: center;
+
+        .ux-summary, .development-summary {
+            font-size: 14px;
+            padding: 24px;
+        }
+
+        .thumbnail {
+            height: 190px;
+            margin: 24px;
+        }
+    }
+
+    .ux-left, .dev-left {
+        width: 100% !important;
+    }
+
+    .project-container {
+        padding: 0px;
+     
+        .thumb-inner {
+            width: 100%;
+
+            h2 {
+                margin-top: -178px;
+                width: 100vw;
+                font-size: 24px;
+            }
+        }
+    }
+
+    .gd-project {
+        flex-direction: column;
+        width: 80%;
+        height: 83%;
+        margin-top: 48px;
+    }
+
+    .grid-piece-container {
+        margin: 24px 0px 0px 0px;
+
+        .gd-piece {
+            background-position: top;
         }
     }
 
@@ -1211,8 +1344,8 @@ a {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(5, 1fr);
         grid-gap: 24px;
-        margin-top: 90px;
-        height: 80%;
+        margin-top: 52px;
+        height: 83%;
         width: 85%
     }
 
@@ -1234,11 +1367,11 @@ a {
         .art-piece {
             //background: red;
             border-radius: 6px;
-            background-size: 260%;
+            background-size: 295%;
             background-position: center -40px;
 
             &:hover {
-                background-size: 300%;
+                background-size: 320%;
             }
         }
     }
@@ -1275,4 +1408,23 @@ a {
         border-radius: 6px;
         //max-height: 80%;
     }
+
+    .animation-info {
+        font-size: 12px;
+        transform: translateY(0px);
+        line-height: 2;
+
+        strong {
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+    }
+
+    .video-container {
+        video {
+            height: 200px;
+            margin-bottom: 48px;
+        }
+    }
+    
 }

@@ -36,6 +36,8 @@ new Vue({
             enter: false,
             exit: false,
             displayLoader: true,
+            menuActive: false,
+            mobile: false,
             options: {
                 //parent: this,
                 afterLoad: this.handleLoad,
@@ -95,6 +97,14 @@ new Vue({
             this.$refs.fullpage.init()
             this.$refs.fullpage.build()
 
+            if(window.innerWidth > 768) {
+                this.mobile = false;
+                this.menuActive = true;
+            }
+            else {
+                this.mobile = true;
+            }
+
             //console.log(parentObj.bio);
 
             /*ui.start('#firebaseui-auth-container', {
@@ -118,6 +128,10 @@ new Vue({
             this.$refs.fullpage.api.moveTo(section);
             this.currentTab = section;
             console.log(this.currentTab);
+            //if on desktop, keep navbar at all times
+            if(window.innerWidth <= 768) {
+                this.menuActive = false;
+            }
         },
         add() {
             //console.log('clicked')

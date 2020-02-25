@@ -31,18 +31,23 @@
                 </div>
             </div>
 
-            <div class="navbar" v-bind:class="( windowOpen ? 'blur-active' : 'blur-inactive' )">
+
+            <div @click="navigate(1)" class="main-logo"></div>
+
+
+            <ul class="menu" @click="menuActive = !menuActive">
+                <div v-bind:class="(menuActive ? 'menu-button-active' : 'menu-button-inactive' )"></div>
+            </ul>
+
+            <div v-if="menuActive" class="navbar" v-bind:class="( windowOpen ? 'blur-active' : 'blur-inactive' )">
                 <div class="nav-inner">
-                    <ul class="nav-options nav-left">
-                        <div @click="navigate(1)" class="main-logo"></div>
-                    </ul>
                     <ul class="nav-options nav-right">
-                        <li @click="navigate(1)" v-bind:class="[currentTab == 1 ? 'nav-active' : 'nav-inactive']">Home</li>
+                        <li @click="navigate(1)" v-bind:class="[currentTab == 1 ? 'nav-active' : 'nav-inactive']" class="home-link">Home</li>
                         <li @click="navigate(8)" v-bind:class="[currentTab == 8 ? 'nav-active' : 'nav-inactive']" class="contact-link">Contact</li>
 
                         <li class="divide">|</li>
 
-                        <li @click="navigate(2)" v-bind:class="[currentTab == 2 ? 'nav-active' : 'nav-inactive']">Prototype</li>
+                        <li @click="navigate(2);" v-bind:class="[currentTab == 2 ? 'nav-active' : 'nav-inactive']">Prototype</li>
                         <li @click="navigate(3)" v-bind:class="[currentTab == 3 ? 'nav-active' : 'nav-inactive']">Development</li>
                         <li @click="navigate(4)" v-bind:class="[currentTab == 4 ? 'nav-active' : 'nav-inactive']">Graphic Design</li>
                         <li @click="navigate(5)" v-bind:class="[currentTab == 5 ? 'nav-active' : 'nav-inactive']">Animation</li>
@@ -185,8 +190,8 @@
                                     </video>
                                 </div>
                             </div>
-                            <p class="animation-info"><strong v-bind:class="( enter ? 'enter delay-4' : 'stage-below' )">{{ i.title }}<span style="opacity:0.6">&emsp;•&emsp;</span></strong>
-                                <span v-bind:class="( enter ? 'enter delay-6' : 'stage-below' )">{{ i.dateCompleted }}<span style="opacity:0.6">&emsp;•&emsp;</span></span>
+                            <p class="animation-info"><strong v-bind:class="( enter ? 'enter delay-4' : 'stage-below' )">{{ i.title }}<span v-if="!mobile" style="opacity:0.6">&emsp;•&emsp;</span></strong><br v-if="mobile">
+                                <span v-bind:class="( enter ? 'enter delay-6' : 'stage-below' )">{{ i.dateCompleted }}<span v-if="!mobile" style="opacity:0.6">&emsp;•&emsp;</span></span><br v-if="mobile">
                                 <span v-bind:class="( enter ? 'enter delay-8' : 'stage-below' )">{{ i.medium }}</span>
                             </p>
                         </div>
