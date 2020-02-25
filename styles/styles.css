@@ -1500,7 +1500,7 @@ a {
   .project-container .thumb-inner h2 {
     margin-top: -163px;
     width: 100vw;
-    font-size: 22px;
+    font-size: 22px !important;
   }
   .gd-project {
     -webkit-box-orient: vertical;
