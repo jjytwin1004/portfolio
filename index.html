@@ -196,7 +196,7 @@
 
                     <div class="section section-photo">
                         <div class="parent">
-                            <div v-for="(i, index) in photo" class="grid-div" v-bind:id="'photo' + index" v-bind:class="( enter ? ('enter delay-' + (index)) : 'stage-grow' )">
+                            <div v-for="(i, index) in photo" class="grid-div" v-bind:id="'photo' + (index + 1)" v-bind:class="( enter ? ('enter delay-' + (index)) : 'stage-grow' )">
                                 <div @click="toggleWindow" class="photo-piece" v-bind:style="{ backgroundImage: 'url( ' + i.src + ')' }"></div>
                             </div>
                         </div>
@@ -206,7 +206,7 @@
 
                     <div class="section section-art">
                         <div class="parent">
-                            <div v-for="(i, index) in art" class="grid-div" v-bind:id="'art' + index" v-bind:class="( enter ? ('enter delay-' + (index)) : 'stage-grow' )">
+                            <div v-for="(i, index) in art" class="grid-div" v-bind:id="'art' + (index + 1)" v-bind:class="( enter ? ('enter delay-' + (index)) : 'stage-grow' )">
                                 <div @click="toggleWindow" class="art-piece" v-bind:style="{ backgroundImage: 'url( ' + i.src + ')' }"></div>
                             </div>
                         </div>
