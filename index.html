@@ -34,20 +34,20 @@
             <div class="navbar" v-bind:class="( windowOpen ? 'blur-active' : 'blur-inactive' )">
                 <div class="nav-inner">
                     <ul class="nav-options nav-left">
-                            <div @click="navigate(1)" class="main-logo"></div>
+                        <div @click="navigate(1)" class="main-logo"></div>
                     </ul>
                     <ul class="nav-options nav-right">
-                        <li @click="navigate(1)" v-bind:class="[currentTab == 1 ? 'nav-active' : '']">Home</li>
-                        <li @click="navigate(8)" v-bind:class="[currentTab == 8 ? 'nav-active' : '']" class="contact-link">Contact</li>
+                        <li @click="navigate(1)" v-bind:class="[currentTab == 1 ? 'nav-active' : 'nav-inactive']">Home</li>
+                        <li @click="navigate(8)" v-bind:class="[currentTab == 8 ? 'nav-active' : 'nav-inactive']" class="contact-link">Contact</li>
 
                         <li class="divide">|</li>
 
-                        <li @click="navigate(2)" v-bind:class="[currentTab == 2 ? 'nav-active' : '']">Prototype</li>
-                        <li @click="navigate(3)" v-bind:class="[currentTab == 3 ? 'nav-active' : '']">Development</li>
-                        <li @click="navigate(4)" v-bind:class="[currentTab == 4 ? 'nav-active' : '']">Graphic Design</li>
-                        <li @click="navigate(5)" v-bind:class="[currentTab == 5 ? 'nav-active' : '']">Animation</li>
-                        <li @click="navigate(6)" v-bind:class="[currentTab == 6 ? 'nav-active' : '']">Photography</li>
-                        <li @click="navigate(7)" v-bind:class="[currentTab == 7 ? 'nav-active' : '']">Drawing</li>
+                        <li @click="navigate(2)" v-bind:class="[currentTab == 2 ? 'nav-active' : 'nav-inactive']">Prototype</li>
+                        <li @click="navigate(3)" v-bind:class="[currentTab == 3 ? 'nav-active' : 'nav-inactive']">Development</li>
+                        <li @click="navigate(4)" v-bind:class="[currentTab == 4 ? 'nav-active' : 'nav-inactive']">Graphic Design</li>
+                        <li @click="navigate(5)" v-bind:class="[currentTab == 5 ? 'nav-active' : 'nav-inactive']">Animation</li>
+                        <li @click="navigate(6)" v-bind:class="[currentTab == 6 ? 'nav-active' : 'nav-inactive']">Photography</li>
+                        <li @click="navigate(7)" v-bind:class="[currentTab == 7 ? 'nav-active' : 'nav-inactive']">Drawing</li>
                     </ul>
                 </div>
             </div>

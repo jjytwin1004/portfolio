@@ -47,7 +47,7 @@ new Vue({
                 navigationPosition: 'left',
                 parallax: true,
                 lazyLoading: false,
-                scrollingSpeed: 700,
+                scrollingSpeed: 800,
                 anchors:["home","ux","development","animation","graphicdesign","photography","art","contact"],
             },
             userBio: {
