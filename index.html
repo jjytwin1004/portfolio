@@ -35,7 +35,7 @@
             <div @click="navigate(1)" class="main-logo"></div>
 
 
-            <ul class="menu" @click="menuActive = !menuActive">
+            <ul class="menu" @click="menuActive = !menuActive; windowOpen = false">
                 <div v-bind:class="(menuActive ? 'menu-button-active' : 'menu-button-inactive' )"></div>
             </ul>
 
