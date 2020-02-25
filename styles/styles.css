@@ -766,7 +766,8 @@ button:hover {
   height: 100%;
   margin: 12px;
   border-radius: 12px;
-  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
 }
@@ -915,7 +916,7 @@ button:hover {
   display: -ms-grid;
   display: grid;
   height: 70%;
-  width: 80%;
+  width: 86%;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
   -ms-grid-rows: (1fr)[4];

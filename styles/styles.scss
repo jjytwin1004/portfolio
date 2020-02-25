@@ -584,28 +584,35 @@ button {
     //z-index: 99999;
 }
 
+$layerOpacity: 0.5;
+
 .section-ux {
-    //background: $colorDark;
+    //background: rgba(#263238, $layerOpacity);
 }
 
 .section-development {
     //background: $colorDark;
+    //background: rgba(#37474F, $layerOpacity);
 }
 
 .section-animation {
     //background: $colorDark;
+    //background: rgba(#455A64, $layerOpacity);
 }
 
 .section-art {
     //background: $colorDark;
+    //background: rgba(#546E7A, $layerOpacity);
 }
 
 .section-gd {
     //background:$colorDark;
+    //background: rgba(#607D8B, $layerOpacity);
 }
 
 .section-photo {
     //background:$colorDark;
+    //background: rgba(#78909C, $layerOpacity);
 }
 
 //----------ux projects----------
@@ -704,7 +711,7 @@ button {
     height: 100%;
     margin:12px;
     border-radius: 12px;
-    cursor: pointer;
+    cursor: zoom-in;
     filter: brightness(0.8);
     //transition: 350ms;
 
@@ -853,7 +860,7 @@ button {
 .parent {
     display: grid;
     height:70%;
-    width: 80%;
+    width: 86%;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-gap: 12px;
