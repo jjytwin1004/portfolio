@@ -1320,7 +1320,7 @@ a {
   display: none;
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1600px) and (min-width: 768px) {
   .project-container {
     padding: 100px !important;
     display: -webkit-box;
@@ -1347,13 +1347,6 @@ a {
   .project-text {
     margin: 60px 200px 0px 200px;
     text-align: center;
-  }
-}
-
-@media only screen and (max-width: 1400px) {
-  .project-container {
-    display: block;
-    padding: 100px 0px 100px 0px !important;
   }
 }
 
