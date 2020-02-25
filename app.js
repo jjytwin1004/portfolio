@@ -90,6 +90,9 @@ new Vue({
     },
     methods: {
         componentsReady() {
+
+            console.log("RESUME LINK::: " + this.userBio.resumeLink);
+
             console.log('fullpage initialized');
 
             //----------LOADER DONE----------
@@ -113,11 +116,14 @@ new Vue({
                 ],
                 // Other config options...
             });*/
+
+            //this.$firebase.collection("development").orderBy("", "desc")
         },
         setBio() {
             //console.log(parentObj.bio[0].text);
             this.userBio.text = this.bio[0].text;
             this.userBio.photo = this.bio[0].photo;
+            this.userBio.resumeLink = this.bio[0].resumeLink;
         },
         setItems() {
             //console.log(this.development[0].title);

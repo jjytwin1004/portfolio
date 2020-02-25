@@ -230,7 +230,7 @@
                             <form class="contact-form">
                                 <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=jjytwin1004@gmail.com" target="_blank"><h4 v-bind:class="(enter ? 'enter delay-2' : 'stage-below')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-email"></div><span v-if="!mobile">jjytwin1004@gmail.com</span><span v-if="mobile">Email</span></h4></a><br>
                                 <a href="https://www.linkedin.com/in/hailey-jiyoun-jun-9220b7140/" target="_blank"><h4 v-bind:class="(enter ? 'enter delay-4' : 'stage-below')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-linkedin"></div><span span v-if="!mobile">Linkedin</span><span v-if="mobile">Linkedin</span></h4></a>
-                                <a href="resume/Resume-Hailey Jun 02.24.2020.pdf" target="_blank"><h4  v-bind:class="(enter ? 'enter delay-6' : 'stage-below')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-cv"></div><span>Resume</span></h4></a>
+                                <a :href="userBio.resumeLink" target="_blank"><h4  v-bind:class="(enter ? 'enter delay-6' : 'stage-below')" style="display: inline-flex; line-height: 40px"><div class="contact-icon icon-cv"></div><span>Resume</span></h4></a>
                             </form>
                         </div>
                         <div class="foot" v-bind:class="( enter ? 'enter delay-2' : 'stage' )"><p>copyright © 2020 - Jiyoun Jun</p></div>
