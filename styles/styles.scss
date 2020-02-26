@@ -524,6 +524,7 @@ $stageDistance: 32px;
     margin: auto;
     z-index: 999;
     transition: 700ms;
+    pointer-events: none;
 
     .hero-title {
         //font-weight: normal !important;
@@ -543,6 +544,7 @@ $swoopDuration: 1s;
     top: 36%;
     z-index: 2999;
     transition: $swoopDuration ease;
+    pointer-events: none;
 
     .hero-title {
         transition: filter 350ms, $swoopDuration;
@@ -559,6 +561,7 @@ $swoopDuration: 1s;
     text-align: center;
     z-index: 2999;
     transition: filter 350ms, $swoopDuration ease;
+    pointer-events: none;
     //opacity: 0.6;
 
     .hero-title {

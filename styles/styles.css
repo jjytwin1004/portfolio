@@ -591,6 +591,7 @@ body h1 {
   z-index: 999;
   -webkit-transition: 700ms;
   transition: 700ms;
+  pointer-events: none;
 }
 
 .title-container-boring .hero-title {
@@ -611,6 +612,7 @@ body h1 {
   z-index: 2999;
   -webkit-transition: 1s ease;
   transition: 1s ease;
+  pointer-events: none;
 }
 
 .title-container .hero-title {
@@ -635,6 +637,7 @@ body h1 {
   transition: 1s ease, -webkit-filter 350ms;
   transition: filter 350ms, 1s ease;
   transition: filter 350ms, 1s ease, -webkit-filter 350ms;
+  pointer-events: none;
 }
 
 .title-container-nav .hero-title {
