@@ -639,8 +639,8 @@ $layerOpacity: 0.5;
     transition: 300ms;
 
     .ux-left, .dev-left {
-        margin-right: 48px;
-        width: 180%
+        //margin-right: 48px;
+        //width: 180%
     }
 
     .thumb-inner {
@@ -1091,7 +1091,7 @@ a {
 
 @media only screen and (max-width: 1600px) and (min-width: 768px) {
     .project-container {
-        padding: 100px !important;
+        padding: 164px 100px 100px 100px !important;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1123,7 +1123,7 @@ a {
 
     .dev-left {
         width: auto;
-        margin: 0px;
+        margin: 0px !important;
     }
 
     video {

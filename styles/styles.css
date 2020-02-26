@@ -688,11 +688,6 @@ button:hover {
   transition: 300ms;
 }
 
-.ux-container .ux-left, .ux-container .dev-left, .development-container .ux-left, .development-container .dev-left {
-  margin-right: 48px;
-  width: 180%;
-}
-
 .ux-container .thumb-inner, .development-container .thumb-inner {
   width: 600px;
   -webkit-transition: 300ms;
@@ -1325,7 +1320,7 @@ a {
 
 @media only screen and (max-width: 1600px) and (min-width: 768px) {
   .project-container {
-    padding: 100px !important;
+    padding: 164px 100px 100px 100px !important;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1357,7 +1352,7 @@ a {
   }
   .dev-left {
     width: auto;
-    margin: 0px;
+    margin: 0px !important;
   }
   video {
     height: 400px;

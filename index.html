@@ -32,7 +32,7 @@
             </div>
 
 
-            <div @click="navigate(1)" class="main-logo"></div>
+            <div @click="navigate(1)" class="main-logo" ></div>
 
 
             <ul class="menu" @click="menuActive = !menuActive; windowOpen = false">
@@ -143,7 +143,7 @@
                             <div class="development-container project-container">
 
                                     <div class="dev-left" v-bind:class="( enter ? 'enter' : 'stage-grow' )">
-                                        <a :href="i.projectLink" >
+                                        <a :href="i.projectLink" target="_blank">
                                             <div class="thumb-container">
                                                 <div class="thumb-inner">
                                                     <div class="development-thumbnail thumbnail" v-bind:style="{ backgroundImage: 'url(' + i.imageSrc + ')' }"></div>
