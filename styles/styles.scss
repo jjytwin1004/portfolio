@@ -557,7 +557,7 @@ $swoopDuration: 1s;
     right: 82%;
     margin: auto;
     width: max-content;
-    top: 16px;
+    top: 14px;
     text-align: center;
     z-index: 2999;
     transition: filter 350ms, $swoopDuration ease;
@@ -639,7 +639,7 @@ $layerOpacity: 0.5;
     transition: 300ms;
 
     .ux-left, .dev-left {
-        //margin-right: 48px;
+        margin-right: 48px;
         //width: 180%
     }
 

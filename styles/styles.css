@@ -630,7 +630,7 @@ body h1 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  top: 16px;
+  top: 14px;
   text-align: center;
   z-index: 2999;
   -webkit-transition: 1s ease, -webkit-filter 350ms;
@@ -686,6 +686,10 @@ button:hover {
           align-items: center;
   -webkit-transition: 300ms;
   transition: 300ms;
+}
+
+.ux-container .ux-left, .ux-container .dev-left, .development-container .ux-left, .development-container .dev-left {
+  margin-right: 48px;
 }
 
 .ux-container .thumb-inner, .development-container .thumb-inner {
