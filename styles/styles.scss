@@ -1300,6 +1300,8 @@ a {
             .home-link {
                 //opacity: 0.8;
                 //font-weight:bold;
+
+                margin-top: -64px;
             }
 
             .contact-link {
@@ -1346,6 +1348,13 @@ a {
         }
     }
 
+    .genre {
+        margin-left:auto;
+        margin-right: auto;
+        font-size: 16px !important;
+        //background: red;
+    }
+
     .gd-project {
         flex-direction: column;
         width: 80%;
@@ -1366,30 +1375,36 @@ a {
     }
 
     .bio-content {
-        margin-left: 30px !important;
+        //margin-left: 30px !important;
         padding-top: 48px !important;
         width: 100% !important;
+        text-align:center;
     }
 
     .bio {
         margin-bottom: 0px !important;
-        width: 83% !important;
+        width: 88% !important;
         font-size: 12px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .contact-form {
-        padding: 12px 24px 12px 24px;
+        padding: 12px 0px 12px 0px;
         transition: 200ms;
         display: flex;
+        width: fit-content;
+        margin-left:auto;
+        margin-right:auto;
 
         h4 {
             font-size: 14px !important;
-            padding: 12px 12px 12px 0px;
+            padding: 12px 0px 12px 0px;
         }
     }
 
     .contact-icon {
-        margin: 0px 12px 0px 0px;
+        margin: 0px 6px 0px 6px;
     }
 
     .section-left {
@@ -1421,6 +1436,8 @@ a {
         .portrait-img {
             width: 100px;
             height: 100px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         h1 {
@@ -1429,9 +1446,9 @@ a {
             margin-bottom: 12px !important;
         }
 
-        p {
+        p.bio {
             font-size: 12px !important;
-            width: 75% !important;
+            width: 88% !important;
         }
     }
 
@@ -1542,6 +1559,21 @@ a {
         top: 36px;
         opacity: 0.6;
         font-weight: normal;
+    }
+
+    .icon-email {
+        //background-image: url('../res/icons/linkedin.png');
+        transform: scale(0.5);
+    }
+
+    .icon-linkedin {
+        //background-image: url('../res/icons/linkedin.png');
+        transform: scale(0.4);
+    }
+
+    .icon-cv {
+        //background-image: url('../res/icons/linkedin.png');
+        transform: scale(0.5);
     }
     
 }
