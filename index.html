@@ -224,9 +224,13 @@
                     <div class="section section-contact">
                         <div class="contact-section section-left">
                             <div class="bio-content" v-bind:class="( enter ? 'enter' : 'stage-below' )">
-                                <div class="portrait-img" v-bind:style="{ backgroundImage: 'url(' + userBio.photo + ')' }" v-bind:class="( enter ? 'enter' : 'stage-grow' )"></div>
-                                <h1>Hailey Jiyoun Jun</h1>
-                                <p class="genre">UX Designer</p>
+                                <div class="bio-head">
+                                    <div class="portrait-img" v-bind:style="{ backgroundImage: 'url(' + userBio.photo + ')' }" v-bind:class="( enter ? 'enter' : 'stage-grow' )"></div>
+                                    <div class="bio-head-text">
+                                        <h1>Hailey Jiyoun Jun</h1>
+                                        <p class="genre">UX Designer</p>
+                                    </div>
+                                </div>
                                 <p class="summary bio">{{ userBio.text }}</p>
                             </div>
                             <form class="contact-form">

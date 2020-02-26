@@ -1337,16 +1337,45 @@ a {
         -ms-flex-align: center;
             align-items: center;
   }
-  .thumb-container {
-    width: 100vw;
+  .title-container {
+    top: 32%;
+  }
+  .title-container-nav {
+    top: 18px;
   }
   .thumb-inner {
     margin-left: auto;
     margin-right: auto;
   }
   .project-text {
-    margin: 60px 200px 0px 200px;
+    margin: 48px auto 0px auto;
     text-align: center;
+    width: 55%;
+  }
+  .dev-left {
+    width: auto;
+    margin: 0px;
+  }
+  video {
+    height: 400px;
+  }
+  .bio-content {
+    width: 45%;
+  }
+  .bio {
+    width: 78%;
+    font-size: 14px;
+  }
+  .genre {
+    font-size: 18px;
+  }
+  .portrait-img {
+    width: 100px;
+    height: 100px;
+  }
+  .animation-info {
+    -webkit-transform: translateY(58px);
+            transform: translateY(58px);
   }
 }
 
