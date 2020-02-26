@@ -628,7 +628,7 @@ body h1 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  top: 22px;
+  top: 16px;
   text-align: center;
   z-index: 2999;
   -webkit-transition: 1s ease, -webkit-filter 350ms;
@@ -1384,7 +1384,7 @@ a {
     margin: auto;
     left: 0px;
     right: 0px;
-    top: 30%;
+    top: 34%;
     opacity: 0;
   }
   .title-container {
@@ -1393,7 +1393,7 @@ a {
   }
   .hero-content p {
     font-size: 16px;
-    margin-top: 42px;
+    margin-top: 52px;
   }
   .next {
     font-size: 14px;
