@@ -296,6 +296,7 @@ new Vue({
             this.infoActive = false;
             this.enter = false;
             this.watch = false;
+            this.windowOpen = false;
 
             console.log("going to: " + (direction.index + 1))
 
