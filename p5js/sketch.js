@@ -13,9 +13,9 @@ function setup() {
   b= random(255);
   //noStroke();
   let color = 255;
-  stroke(255);
   strokeWeight(3);
-  fill('hsla(100, 100%, 100%, 0.5)');
+  fill('rgba(155,155,155,0.5)');
+  stroke('rgba(155,155,155,0.5)');
 
   for (let i = 0; i < num; i++) {
     mx.push(i);
