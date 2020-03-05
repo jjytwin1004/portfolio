@@ -1,7 +1,8 @@
 body {
   margin: 0px;
   font-family: 'Nunito', sans-serif;
-  background: #131417;
+  background: -webkit-gradient(linear, left top, left bottom, from(#37474F), to(black));
+  background: linear-gradient(#37474F, black);
   color: white;
 }
 
@@ -1207,7 +1208,7 @@ h4 {
 }
 
 h4:hover {
-  background: #212225;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 a {
