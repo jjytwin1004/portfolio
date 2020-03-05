@@ -15,7 +15,7 @@ body {
     font-family: 'Nunito', sans-serif;
     //font-family: 'Noto Sans KR', ;
     //background: linear-gradient($colorMain, black);
-    background: linear-gradient(#37474F, black);
+    background: rgb(40,40,40);
     color: white;
 
     p {
@@ -29,6 +29,22 @@ body {
     h1 {
         transition: 300ms;
     }
+}
+
+#landing-page-backdrop {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;   
+    z-index:-1;
+}
+
+.p5canvas {
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+   
 }
 
 .visible {

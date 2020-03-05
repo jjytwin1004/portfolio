@@ -48,7 +48,7 @@
                         <li class="divide">|</li>
 
                         <li @click="navigate(2);" v-bind:class="[currentTab == 2 ? 'nav-active' : 'nav-inactive']">Prototype</li>
-                        <li @click="navigate(3)" v-bind:class="[currentTab == 3 ? 'nav-active' : 'nav-inactive']">Development</li>
+                        <li @click="navigate(3)" v-bind:class="[currentTab == 3 ? 'nav-active' : 'nav-inactive']">Interactive</li>
                         <li @click="navigate(4)" v-bind:class="[currentTab == 4 ? 'nav-active' : 'nav-inactive']">Graphic Design</li>
                         <li @click="navigate(5)" v-bind:class="[currentTab == 5 ? 'nav-active' : 'nav-inactive']">Animation</li>
                         <li @click="navigate(6)" v-bind:class="[currentTab == 6 ? 'nav-active' : 'nav-inactive']">Photography</li>
@@ -85,9 +85,13 @@
 
             <h1 v-if="mobile" class="mobile-nav-ind">{{ sectionTitles[currentTab - 1] }}</h1>
 
+            <!-- landing page -->
+
             <div v-bind:class="( windowOpen ? 'blur-active' : 'blur-inactive' )">
                 <full-page ref="fullpage" :options="options" id="fullpage" :skip-init="true" v-bind:class="( enter ? 'control-enter' : 'control-stage' )">
-                    <div class="section hero-section">
+                    <div class="section hero-section" id="landing-page">
+                        <div id="landing-page-backdrop"></div>
+                        <!--canvas id="defaultCanvas0" class="p5canvas" style="width: 100vw; height: 100vh;"></canvas-->
                         <div class="hero-content">
                             <!--div class="title-container-boring"><h1 class="hero-title">Hailey Jiyoun Jun</h1></div-->
                             <p style="margin-bottom: 18px; padding-top: 0px;" v-bind:class="(enter ? 'enter delay-2' : 'stage-below')">UX Designer</p>
@@ -260,5 +264,9 @@
         <script src="fullpage/fullpage.js"></script>
         <!-- app -->
         <script src="app.js"></script>
+        <!-- p5js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+        <!-- sketch -->
+        <script src="p5js/sketch.js"></script>
     </body>
 </html>

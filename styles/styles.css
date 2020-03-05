@@ -1,8 +1,7 @@
 body {
   margin: 0px;
   font-family: 'Nunito', sans-serif;
-  background: -webkit-gradient(linear, left top, left bottom, from(#37474F), to(black));
-  background: linear-gradient(#37474F, black);
+  background: #282828;
   color: white;
 }
 
@@ -17,6 +16,21 @@ body .credit {
 body h1 {
   -webkit-transition: 300ms;
   transition: 300ms;
+}
+
+#landing-page-backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+}
+
+.p5canvas {
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .visible {

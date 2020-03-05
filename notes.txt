@@ -1,0 +1,7 @@
+res/gifs/leaflet.gif
+
+https://jjytwin1004.github.io/leaflet_ism225/
+
+Using Leaflet, I designed a map that shows average house price for each state. Each state's average house price will be shown in the box top right corner. Each color indicate different range of price. You can check this in the box bottom right corner.
+
+Real Estate Map
