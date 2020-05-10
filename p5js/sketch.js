@@ -25,7 +25,7 @@ function setup() {
 
 function draw() {
   state=false;
-  background(40);
+  background(33, 34, 37);
   color(255);
   
   // Cycle through the array, using a different entry on each frame.
